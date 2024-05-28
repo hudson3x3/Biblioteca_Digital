@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D6FFB82-4398-4DD8-A307-208C9F60E7AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoLTM.WebSmart.DTO</RootNamespace>
+    <AssemblyName>GrupoLTM.WebSmart.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|AnyCPU'">
+    <OutputPath>bin\Hml\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|AnyCPU'">
+    <OutputPath>bin\Prd\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_DEV_Site|AnyCPU'">
+    <OutputPath>bin\MeuMundoAvon_DEV_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_HML_Site|AnyCPU'">
+    <OutputPath>bin\MeuMundoAvon_HML_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.MeuMundoAvon_PRD|AnyCPU'">
+    <OutputPath>bin\Web.MeuMundoAvon_PRD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|x86'">
+    <OutputPath>bin\x86\Hml\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|x86'">
+    <OutputPath>bin\x86\Dev\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|x86'">
+    <OutputPath>bin\x86\Prd\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_DEV_Site|x86'">
+    <OutputPath>bin\x86\MeuMundoAvon_DEV_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_HML_Site|x86'">
+    <OutputPath>bin\x86\MeuMundoAvon_HML_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.MeuMundoAvon_PRD|x86'">
+    <OutputPath>bin\x86\Web.MeuMundoAvon_PRD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BannerModificacaoModel.cs" />
+    <Compile Include="BannerModel.cs" />
+    <Compile Include="AccountStatementModel.cs" />
+    <Compile Include="LogAcessoImpersonateModel.cs" />
+    <Compile Include="LogSpanModel.cs" />
+    <Compile Include="LogLogarComoModel.cs" />
+    <Compile Include="LogControllerModel.cs" />
+    <Compile Include="EstornoModel.cs" />
+    <Compile Include="LogAcessoParticipanteModel.cs" />
+    <Compile Include="LogBannerModel.cs" />
+    <Compile Include="LogProcessamentoModel.cs" />
+    <Compile Include="RequestApi.cs" />
+    <Compile Include="ResultRequestApi.cs" />
+    <Compile Include="ParticipanteExtratoModel.cs" />
+    <Compile Include="PontosAutomacao.cs" />
+    <Compile Include="AprovacaoResgatesOfflineModel.cs" />
+    <Compile Include="AprovacaoPontosModel.cs" />
+    <Compile Include="AprovacaoResultadoCalculadoModel.cs" />
+    <Compile Include="ArquivoMonitoramentoModel.cs" />
+    <Compile Include="ArquivoResgateOffModel.cs" />
+    <Compile Include="ArquivoPontosModel.cs" />
+    <Compile Include="Avon\AvonIdentityToken.cs" />
+    <Compile Include="Avon\AvonRequestLoginIdentity.cs" />
+    <Compile Include="ClusterFilterModel.cs" />
+    <Compile Include="ClusterModel.cs" />
+    <Compile Include="ClusterProductModel.cs" />
+    <Compile Include="ClusterRAModel.cs" />
+    <Compile Include="ClusterRATempModel.cs" />
+    <Compile Include="LogGrayLog.cs" />
+    <Compile Include="LogExecutionTimeModel.cs" />
+    <Compile Include="MarketPlace\AuthorizeOrder.cs" />
+    <Compile Include="MarketPlace\AuthorizeResponse.cs" />
+    <Compile Include="MarketPlace\CancelOrderResponse.cs" />
+    <Compile Include="MarketPlace\CancelRequest.cs" />
+    <Compile Include="MarketPlace\CancelResponse.cs" />
+    <Compile Include="MarketPlace\ConfirmRequest.cs" />
+    <Compile Include="MarketPlace\ConfirmResponse.cs" />
+    <Compile Include="SendGridModel.cs" />
+    <Compile Include="FatorConversaoPontosSimuladorModel.cs" />
+    <Compile Include="CalculoFatorConversaoSimuladorModel.cs" />
+    <Compile Include="GenericSupplier\GSResponseErrors.cs" />
+    <Compile Include="GenericSupplier\GSResponse.cs" />
+    <Compile Include="GenericSupplier\ProductSkuClusteredSearchRequest.cs" />
+    <Compile Include="CSVResgateOffLineModel.cs" />
+    <Compile Include="ResgateOffLineModel.cs" />
+    <Compile Include="SaldoModel.cs" />
+    <Compile Include="HistoricoModel.cs" />
+    <Compile Include="ExtratoItemModel.cs" />
+    <Compile Include="ExtratoModel.cs" />
+    <Compile Include="Avon\AvonParticipantGetViewModel.cs" />
+    <Compile Include="Avon\AvonRequestLogin.cs" />
+    <Compile Include="Avon\AvonRequestProfile.cs" />
+    <Compile Include="Avon\AvonResponseLogin.cs" />
+    <Compile Include="Avon\AvonResponseProfile.cs" />
+    <Compile Include="FatorConversaoSimuladorModel.cs" />
+    <Compile Include="LogSimuladorModel.cs" />
+    <Compile Include="SubMecanicaSimuladorModel.cs" />
+    <Compile Include="MecanicaSubMecanicaSimuladorModel.cs" />
+    <Compile Include="FatorConversaoMecanicaSimuladorModel.cs" />
+    <Compile Include="IconeSimuladorModel.cs" />
+    <Compile Include="MecanicaSimuladorModel.cs" />
+    <Compile Include="CampanhaMecanicaSimuladorModel.cs" />
+    <Compile Include="CampanhaSimuladorModel.cs" />
+    <Compile Include="ProgramaIncentivoModel.cs" />
+    <Compile Include="ImportacaoErroDetalheModel.cs" />
+    <Compile Include="ErroImportacaoArquivoModel.cs" />
+    <Compile Include="CancelamentoPontosModel.cs" />
+    <Compile Include="CatalogoCPModel.cs" />
+    <Compile Include="LogAcessoModel.cs" />
+    <Compile Include="LogErroModel.cs" />
+    <Compile Include="MarketPlace\MarketPlaceResponseToken.cs" />
+    <Compile Include="CampanhaConfiguracaoVisualizacaoRankingModel.cs" />
+    <Compile Include="CampanhaConteudoModel.cs" />
+    <Compile Include="CampanhaGrupoItemModel.cs" />
+    <Compile Include="CampanhaFaixaAtingimentoModel.cs" />
+    <Compile Include="CampanhaLogArquivoModel.cs" />
+    <Compile Include="CampanhaPerfilModel.cs" />
+    <Compile Include="CampanhaEsturutraModel.cs" />
+    <Compile Include="CampanhaModel.cs" />
+    <Compile Include="CampanhaPeriodoModel.cs" />
+    <Compile Include="CampanhaResultadoModel.cs" />
+    <Compile Include="CatalogoModel.cs" />
+    <Compile Include="DashboardModel.cs" />
+    <Compile Include="ParticipanteCatalogoModel.cs" />
+    <Compile Include="ParticipanteSearchModel.cs" />
+    <Compile Include="PontuacaoCsvModel.cs" />
+    <Compile Include="PontuacaoEnvioModel.cs" />
+    <Compile Include="PontuacaoModel.cs" />
+    <Compile Include="EstadoModel.cs" />
+    <Compile Include="AssuntoModel.cs" />
+    <Compile Include="ConfiguracaoCampanhaModel.cs" />
+    <Compile Include="ConteudoModel.cs" />
+    <Compile Include="PerfilModel.cs" />
+    <Compile Include="EstruturaModel.cs" />
+    <Compile Include="ExactTargetModel.cs" />
+    <Compile Include="FaleConoscoModel.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="LogModel.cs" />
+    <Compile Include="MenuModel.cs" />
+    <Compile Include="ModuloModel.cs" />
+    <Compile Include="PrimeiroAcessoModel.cs" />
+    <Compile Include="ParticipanteModel.cs" />
+    <Compile Include="PeriodoModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionarioModel.cs" />
+    <Compile Include="DespempenhoModel.cs" />
+    <Compile Include="QuestionarioPerguntasModel.cs" />
+    <Compile Include="PerguntaModel.cs" />
+    <Compile Include="ParticipanteQuestionarioModel.cs" />
+    <Compile Include="CampanhaResultadoDetalheModel.cs" />
+    <Compile Include="RedemptionModel.cs" />
+    <Compile Include="RelatorioPermissaoModel.cs" />
+    <Compile Include="RespostaModel.cs" />
+    <Compile Include="TipoEstruturaModel.cs" />
+    <Compile Include="VendaLogArquivoModel.cs" />
+    <Compile Include="WebPremiosModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
