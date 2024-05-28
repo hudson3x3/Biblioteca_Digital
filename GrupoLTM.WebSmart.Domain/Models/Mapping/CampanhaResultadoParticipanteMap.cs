@@ -1,0 +1,41 @@
+using System.Data.Entity.ModelConfiguration;
+
+namespace GrupoLTM.WebSmart.Domain.Models.Mapping
+{
+    public class CampanhaResultadoParticipanteMap : EntityTypeConfiguration<CampanhaResultadoParticipante>
+    {
+        public CampanhaResultadoParticipanteMap()
+        {
+            // Primary Key
+            this.HasKey(t => t.Id);
+
+            // Properties
+            // Table & Column Mappings
+            this.ToTable("CampanhaResultadoParticipante");
+            this.Property(t => t.Id).HasColumnName("Id");
+            this.Property(t => t.ArquivoId).HasColumnName("ArquivoId");
+            this.Property(t => t.ParticipanteId).HasColumnName("ParticipanteId");
+            this.Property(t => t.CampanhaPeriodoId).HasColumnName("CampanhaPeriodoId");
+            this.Property(t => t.CampanhaGrupoItemId).HasColumnName("CampanhaGrupoItemId");
+            this.Property(t => t.Valor).HasColumnName("Valor");
+            this.Property(t => t.Ativo).HasColumnName("Ativo");
+            this.Property(t => t.DataInclusao).HasColumnName("DataInclusao");
+            this.Property(t => t.DataAlteracao).HasColumnName("DataAlteracao");
+
+            // Relationships
+            this.HasRequired(t => t.Arquivo)
+                .WithMany(t => t.CampanhaResultadoParticipantes)
+                .HasForeignKey(d => d.ArquivoId);
+            this.HasRequired(t => t.CampanhaGrupoItem)
+                .WithMany(t => t.CampanhaResultadoParticipantes)
+                .HasForeignKey(d => d.CampanhaGrupoItemId);
+            this.HasRequired(t => t.CampanhaPeriodo)
+                .WithMany(t => t.CampanhaResultadoParticipantes)
+                .HasForeignKey(d => d.CampanhaPeriodoId);
+            this.HasRequired(t => t.Participante)
+                .WithMany(t => t.CampanhaResultadoParticipantes)
+                .HasForeignKey(d => d.ParticipanteId);
+
+        }
+    }
+}
