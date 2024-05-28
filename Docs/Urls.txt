@@ -1,0 +1,33 @@
+Catálogos
+DEV: 60270
+HML: 40267
+PRD: 40267
+
+Ambiente - DEV
+Site - http://meumundoavondev.azurewebsites.net/
+API  - http://meumundoavondevadmin.azurewebsites.net/
+
+Ambiente - HML
+Site - http://hml.meumundoavon.com.br/
+API  - http://apihml.meumundoavon.com.br/
+
+
+Avon Autenticação entrada MD5
+.../avonAuthentication/60270/catalogo/?a=10001160&encryptedKey=223C869EDF69391AACC3227AD3335A90
+.../avonAuthentication/40267/catalogo?a=00000311&encryptedKey=8F8177ED1EF5E89F532383ACDA04AB4B
+
+Extrato
+/avonAuthentication/40267/extrato/?a=10001160&encryptedKey=223C869EDF69391AACC3227AD3335A90
+
+/avonAuthentication/60270/extrato/?a=73075127&encryptedKey=505D2387083A956E7F4515FDF244CE0C
+
+/avonAuthentication/60270/extrato/?a=72007208&encryptedKey=75496089270369FE656636D8014AFBD1
+
+/avonAuthentication/40292/extrato/?a=10001160&encryptedKey=223C869EDF69391AACC3227AD3335A90
+
+/avonAuthentication/40292/extrato/?a=68331104&encryptedKey=C6645DA83FCF4726A57E100BFFA76FC3
+
+https://hml.meumundoavon.com.br/avonAuthentication/40292/extrato/?a=58460835&encryptedKey=3753768EC3AFBCE1C6DFA6716F27A592
+
+
+

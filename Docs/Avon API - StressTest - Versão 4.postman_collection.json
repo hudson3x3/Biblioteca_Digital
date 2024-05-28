@@ -1,0 +1,499 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Avon API - StressTest - Versão 2",
+		"_postman_id": "2a8845d2-5b90-e7a1-d93f-f4a64051787c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Catálogo",
+			"description": "",
+			"item": [
+				{
+					"name": "Token - POST",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"access_token_stress_test\", data.access_token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "https://apiman.webpremios.com.br/avon/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QXZvbjpsdG1hdm9uMjAyMg==",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "f1fc526404c3492e9f26a7ed31c77ca1",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:52848",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "accountNumber",
+									"value": "59310274",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "catalogId",
+									"value": "40322",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "pageName",
+									"value": "catalogo",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "Gera token Oauth Avon MMA\n\nBasic QXZvbjpsdG1hdm9uMjAyMg== (Fixo)\n\naccountNumber = AccountNumber Avon\ncatalogId = Catálogo"
+					},
+					"response": []
+				},
+				{
+					"name": "Participante - GET (ParticipantCtrl)",
+					"request": {
+						"url": "https://apiman.webpremios.com.br/avon/participant",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token_stress_test}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "f1fc526404c3492e9f26a7ed31c77ca1",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:52848",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Coleta informações do Participante do Token e atualiza suas informações\r\nUtiliza MktPlace e Avon\r\n\r\nSegundo acesso em diante"
+					},
+					"response": []
+				},
+				{
+					"name": "Avon GetUserInfo - GET (AvonCtrl)",
+					"request": {
+						"url": "https://apiman.webpremios.com.br/avon/avon",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token_stress_test}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "f1fc526404c3492e9f26a7ed31c77ca1",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:52848",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Coleta informações Avon do Participante do Token \r\nUtiliza Avon"
+					},
+					"response": []
+				},
+				{
+					"name": "Avon RedirectMktPlace - GET (AvonCtrl)",
+					"request": {
+						"url": "https://apiman.webpremios.com.br/avon/redirectmktplace",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token_stress_test}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "f1fc526404c3492e9f26a7ed31c77ca1",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:52848",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Redirect menu do site MMA"
+					},
+					"response": []
+				},
+				{
+					"name": "Avon Redirect - GET (AvonCtrl)",
+					"request": {
+						"url": "https://apiman.webpremios.com.br/avon/redirect",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token_stress_test}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "f1fc526404c3492e9f26a7ed31c77ca1",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:52848",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Redirect vindo da Avon"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Extrato",
+			"description": "",
+      "item": [
+        {
+          "name": "Token - POST",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "postman.setGlobalVariable(\"access_token_stress_test\", data.access_token);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/token",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic QXZvbjpsdG1hdm9uMjAyMg==",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "accountNumber",
+                  "value": "59310274",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "catalogId",
+                  "value": "40322",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "pageName",
+                  "value": "catalogo",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": "Gera token Oauth Avon MMA\n\nBasic QXZvbjpsdG1hdm9uMjAyMg== (Fixo)\n\naccountNumber = AccountNumber Avon\ncatalogId = Catálogo"
+          },
+          "response": []
+        },
+        {
+          "name": "Participante - GET (ParticipantCtrl)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "postman.setGlobalVariable(\"access_token_part_stress_test\", data.AccessToken);",
+                  "postman.setGlobalVariable(\"id_part_mktplace_stress_test\", data.Id);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/participant",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": "Coleta informações do Participante do Token e atualiza suas informações\r\nUtiliza MktPlace e Avon\r\n\r\nSegundo acesso em diante"
+          },
+          "response": []
+        },
+        {
+          "name": "Summary - GET (ExtractCtrl)",
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/extrato/GetSummary",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "Balance - POST (ExtractCtrl)",
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/extrato/GetBalance",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"accessTokenMktPlace\":\"jOPc_i72iqv--e4L0Ne60Im5DB0E3Ii6STZXJP-7Qb4Qj9YDUMjQwIpYPb8Jord0DukWixGzvh5DPwET91h5HqAocQOCJWeJo_IxPWbyyAyVlh0tYmDlz0aAUBzXYlnDANqhVrSiW0sEYofCIKjyBUPCll2ZxP9v7-Pc_c7xLEpReLxv4-L8aq0IWntIgsab9tkb_hIOneU0ssjQaLxN69LK8xIcYqhKVuAwOBCb5xi_U-IfHz3TVSqtxkq5ONobi8dlrmLEa9VVZ5A3kvjCzFqSNb32T3lNViSG8gz-vuBUFJ9oYcIBaYS9_69xABC3OoxLHYlv0XCBC9q1dko1NrXGzhc42SzB-KXgxvrJ5dK7s_Irhdc9nq46uzFbxSnmXyEBV8JxjTx0pXM8_AwpKtH37tDncv0rNrp-UJt6iN5T18_EpeD2dS5n8nZdYO2HzxslPn6gqdNv_aK5TqT8Rh5u7SDw0M-olGpWe_qH2qI38itWHGfHKpiW5ijtSpEtKpeKYiLCVoz_b4Uhmz0TJ2Hf0WXx0XVcnXiP6IDnmw45H-fvYY2Aox-3Uquh47dEFlcP_B7FjrkpvunNYKBf4w9NmH5QUAO-nCzeQ58dCRFBO3qz3NjuVPpcip_oQXp9e2gCg6PAjkuJJx-6fC1-1qPn1CTSZwHz7hqEHacid3RGGaHJcBSz-lulWl69N-qlChE1TfkxrOGbqspBggxTz2EumBxHLIN0iUkXx_hKIA0\",\n\t\"mktPlaceParticipantId\":\"18341247\"\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "DebitCurrencyBalance - POST (ExtractCtrl)",
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/extrato/DebitCurrencyBalance",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"accessTokenMktPlace\":\"{{access_token_part_stress_test}}\",\n\t\"mktPlaceParticipantId\":\"{{id_part_mktplace_stress_test}}\"\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "DebitCashBalance - POST (ExtractCtrl)",
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/extrato/DebitCashBalance",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"accessTokenMktPlace\":\"{{access_token_part_stress_test}}\",\n\t\"mktPlaceParticipantId\":\"{{id_part_mktplace_stress_test}}\"\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "GetExpirationDate - POST (ExtractCtrl)",
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/extrato/ExpirationDate",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"accessTokenMktPlace\":\"{{access_token_part_stress_test}}\",\n\t\"mktPlaceParticipantId\":\"{{id_part_mktplace_stress_test}}\"\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "name": "HeaderByType - GET (ExtractCtrl)",
+          "request": {
+            "url": "https://apiman.webpremios.com.br/avon/extrato/GetHeaderByType/S",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token_stress_test}}",
+                "description": ""
+              },
+              {
+                "key": "Ocp-Apim-Subscription-Key",
+                "value": "f1fc526404c3492e9f26a7ed31c77ca1",
+                "description": ""
+              },
+              {
+                "key": "Origin",
+                "value": "http://localhost:52848",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+		}
+	]
+}

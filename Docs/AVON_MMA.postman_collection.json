@@ -1,0 +1,298 @@
+{
+	"id": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+	"name": "AVON - MMA",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "fae473bb-350b-ab26-1de8-8c58e702c430",
+			"name": "AVON",
+			"description": "",
+			"order": [
+				"530f89eb-fd43-f396-ca7b-5a52c8b465c7",
+				"4ec2ce5f-2491-43d5-19e1-8219f97b1c87"
+			],
+			"owner": 0
+		},
+		{
+			"id": "67412094-2716-431a-d084-03187b092295",
+			"name": "Azure",
+			"description": "",
+			"order": [
+				"9c24f72c-309d-2f85-eb90-9a1d4102f062"
+			],
+			"owner": 0
+		},
+		{
+			"id": "a1e1c3df-6d5b-ff2f-c3da-f9037525f9b4",
+			"name": "LTM",
+			"description": "",
+			"order": [
+				"e6104236-b9df-a065-a8d6-cc1c97daaf1d",
+				"81c3b53a-cddd-921d-d98b-32495be49b46"
+			],
+			"owner": 0,
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a"
+		},
+		{
+			"id": "ed40d869-0dc0-71d7-f9b6-ed5cb66a7285",
+			"name": "MarketPlace",
+			"description": "",
+			"order": [
+				"1e620ec4-6c0d-62b1-6ac8-f55faecd619a",
+				"07d70422-fc45-0412-1a65-ad2a48d1d20f",
+				"7386f475-0b32-f390-22d6-8e50365672aa",
+				"e41c3201-4b67-a7fd-9b0c-c88738586316"
+			],
+			"owner": 0
+		}
+	],
+	"timestamp": 1464951485955,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "07d70422-fc45-0412-1a65-ad2a48d1d20f",
+			"headers": "Authorization: Bearer 5ipsTdgtL1w9RZpiQfqvPkpmEI15N_tqfltzhsdpRXUzacGlWPHnCxOrQYORYGPVKOC3y_txAS1b_BDQU8Fut-VvsuDBOCARS0nXxZBlKsXQ4zIf1RzJIjFoF56h9Y6LmiwnzyGmfYyIZUls-byeRlfMiIOXY56uq6YuEUX0htTEZIIRiBG3s5NDWNB0N_ag9RCncssJWckO7B9IBQgSY9-xCmDz3Mq9pGI0i1bPF_bTOAD4A7TiS-Uf8Io8dLrKBhxb0kAABCDQXWUT-CaUnhvhCTNbjSRmWAit7kq30jpCzpTVjnJUHyEZVLDf6gklGmLNIOR5EfDhHxkRBID5-nzLMcm2Q06uCwdIOAtYkblSc6SQCbefxLhN8mA9NHamz8f5ilMrjl1GJ0L7-AsswJkLmjKNU4AZVB4vfvc96mKWmmv8VsVPmCkITaAtNCWM2r0h8OktEXiRjzXZHLoEpeMMnJQJ8O6-GdwY4VOXijTkXz15AXolqFp6U59R6-WAxVPbQr3RIzaO6at2fOJKcXOMcZ94XA94bUCBpphX8ovUevwQkoqnpk5_DaDqgbI9CeGS2Fn0Fwqg-voAVJ1vaA0x5hLHBuJ9qakF1HDZIplTEc9VJTZtHpCRasV8CYxVDzC11NfIgIH7p7yu2FCtU2__Ry0\nContent-Type: application/json\n",
+			"url": "http://ltmh-mkp-apimkp.cloudapp.net/v1/participants",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1468329984304,
+			"name": "Incluir Participante",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"folder": "ed40d869-0dc0-71d7-f9b6-ed5cb66a7285",
+			"rawModeData": "{\r\n   \"Id\":0,\r\n   \"ClientId\":306,\r\n   \"ProfileId\":50435,\r\n   \"ParticipantStatusId\":1,\r\n   \"LogonTypeId\":1,\r\n   \"CatalogId\":60270,\r\n   \"Username\":\"62794141\",\r\n   \"CampaignId\":60312,\r\n   \"MaritalStatusId\":6,\r\n   \"Name\":\"EUNICEFRIES DOS SANTOS\",\r\n   \"PersonTypeId\":1,\r\n   \"CPF\":\"30499512812\",\r\n   \"RG\":\"123\",\r\n   \"Password\":null,\r\n   \"Gender\":2,\r\n   \"BirthDate\":\"2010-10-10T03:00:00Z\",\r\n   \"Address\":[\r\n      {\r\n         \"AddressText\":\"R BENJAMIN ANTONIO ANSAI\",\r\n         \"AddressName\":\"HOME\",\r\n         \"Number\":\"320\",\r\n         \"Complement\":\"LJ 42\",\r\n         \"District\":\"NOVO MUNDO\",\r\n         \"City\":\"CURITIBA\",\r\n         \"State\":\"PR\",\r\n         \"ZipCode\":\"81030490\",\r\n         \"Reference\":\"CENTRO COMERCIAL BRAZILIA\"\r\n      }\r\n   ],\r\n   \"Phones\":[\r\n      {\r\n         \"Ddd\":\"041\",\r\n         \"Number\":\"33278163\",\r\n         \"PhoneType\":1\r\n      },\r\n      {\r\n         \"Ddd\":\"041\",\r\n         \"Number\":\"99999999\",\r\n         \"PhoneType\":3\r\n      }\r\n   ],\r\n   \"Accepts\":[\r\n      {\r\n         \"Checked\": false\r\n      }\r\n   ],\r\n   \"Emails\":[\r\n      {\r\n         \"EmailText\":\"andre@teste.com\",\r\n         \"EmailType\":1\r\n      }\r\n   ],\r\n   \"Estrutura\":\"America/Sao_Paulo\",\r\n   \"OptInEmail\":false,\r\n   \"OptInComunicacaoFisica\":false,\r\n   \"OptInSms\":false,\r\n   \"OptinAceite\":false,\r\n   \"ConfirmEmail\":\"andre@teste.com\"\r\n}"
+		},
+		{
+			"id": "1e620ec4-6c0d-62b1-6ac8-f55faecd619a",
+			"headers": "Authorization: Basic MWU2OGE1NDFkMjk3NDlhOTgyZDYwMjliNTFiOWZmMGI6QHZvbiEyIzQl\n",
+			"url": "http://ltmh-mkp-apimkp.cloudapp.net/token",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "client_credentials",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "campaign_id",
+					"value": "60312",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "Gera Token campanha",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1468265757009,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ed40d869-0dc0-71d7-f9b6-ed5cb66a7285"
+		},
+		{
+			"id": "4ec2ce5f-2491-43d5-19e1-8219f97b1c87",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://webeservicesuat.avon.com/agws/srvc/repProfile/get",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1465843678503,
+			"name": "Get Info - IRT 2083",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"folder": "fae473bb-350b-ab26-1de8-8c58e702c430",
+			"rawModeData": "{\r\n\"profile\" : {\r\n\"userId\" : \"brltmusr\",\r\n\"mrktCd\" : \"BR\",\r\n\"token\" : \"{{access_token_mma}}\",\r\n\"acctNr\" : \"62794141\",\r\n\"langCd\" : \"pt\",\r\n\"devKey\" : \"8OgJBs/YLioPeshaUO0/9jyevx6/uqJ/\",\r\n\"version\" : \"3\"\r\n}\r\n}\r\n"
+		},
+		{
+			"id": "530f89eb-fd43-f396-ca7b-5a52c8b465c7",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://webeservicesuat.avon.com/agws/srvc/login",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "var data = JSON.parse(responseBody);\npostman.setGlobalVariable(\"access_token_mma\", data.auth.token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1465410353155,
+			"name": "Login - Autenticação - IRT2305",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"folder": "fae473bb-350b-ab26-1de8-8c58e702c430",
+			"rawModeData": "{\r\n \"login\":\r\n  {\r\n  \"userId\": \"brltmusr\",\r\n  \"password\": \"123abc\",\r\n  \"mrktCd\": \"BR\",\r\n  \"langCd\": \"pt\",\r\n  \"devKey\": \"8OgJBs/YLioPeshaUO0/9jyevx6/uqJ/\",\r\n  \"version\": 1\r\n }\r\n}"
+		},
+		{
+			"id": "7386f475-0b32-f390-22d6-8e50365672aa",
+			"headers": "Authorization: Basic MWU2OGE1NDFkMjk3NDlhOTgyZDYwMjliNTFiOWZmMGI6QHZvbiEyIzQl\n",
+			"url": "http://ltmh-mkp-apimkp.cloudapp.net/token",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "campaign_id",
+					"value": "60312",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "14031855",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1468418088437,
+			"name": "Gera Token participante",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"folder": "ed40d869-0dc0-71d7-f9b6-ed5cb66a7285"
+		},
+		{
+			"id": "81c3b53a-cddd-921d-d98b-32495be49b46",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer 2LJ6mFPlrJYjer_2QXIkAkxlGdqngTOaKZwdj0HwOm6REKmn9Vnjj0DO4Y0SYY-aB9PaRjZHD5vaoGKaOE-v6RNxkVAaJUIbLZi3WmM4B2zwZsWRUieoQrkgrsw0oGn6CQrHrM8i4TGrH2QUxc4_DUmIEYjTrux-jUwYxGfwsEBA05s_fmes3zws6jMYwmNTGZ7TNXyry5G3-4fl00QoYhCPGwUpBzcNUalssq8eAl5QWWoEIpXKj-wZfvgXGiWliDpjduhg9vQ4PA0YAptFMffYbe7sWaO6FzmWWx1ZjZg\n",
+			"url": "http://localhost:51145/api/Avon/RegisterUser",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1466683207561,
+			"name": "Register User - POST",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"rawModeData": "{\r\n   \"Id\":0,\r\n   \"ClientId\":0,\r\n   \"ProfileId\":0,\r\n   \"ParticipantStatusId\":0,\r\n   \"LogonTypeId\":1,\r\n   \"CatalogId\":0,\r\n   \"Username\":\"asilva\",\r\n   \"CampaignId\":30207,\r\n   \"MaritalStatusId\":0,\r\n   \"Name\":\"Teste\",\r\n   \"PersonTypeId\":1,\r\n   \"CPF\":\"30499512812\",\r\n   \"RG\":\"324445556\",\r\n   \"Password\":null,\r\n   \"Gender\":1,\r\n   \"BirthDate\":\"2000-01-01T00:00:00\",\r\n   \"Address\":null,\r\n   \"Phones\":null,\r\n   \"Accepts\":null,\r\n   \"Emails\":null\r\n}"
+		},
+		{
+			"id": "9c24f72c-309d-2f85-eb90-9a1d4102f062",
+			"headers": "Authorization: Basic QXZvbjpsdG1hdm9uMjAyMg==\n",
+			"url": "meumundoavondevadmin.azurewebsites.net/api/token",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "accountNumber",
+					"value": "62794141",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "catalogId",
+					"value": "40210",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pageName",
+					"value": "catalogo",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "meumundoavondevadmin.azurewebsites.net/api/token",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1467723894467,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "67412094-2716-431a-d084-03187b092295"
+		},
+		{
+			"id": "e41c3201-4b67-a7fd-9b0c-c88738586316",
+			"headers": "Authorization: Bearer -23Y9VCv4zUXQGX1z7xBkvB5QDLuYkbMKWePxV1pHtR7abbtktZmKIu84RufPzV4k58xtWUNcUCR6kcxj7SV_TcAxk2lHL63hmdaAYm1O7s4sr_lu4WrXXqL_FEosTxZPUwYvHOV1QpL98ge6ULmZWwzuMK0EFdyo3nAA9pyn49VekBn8M08QooNbT_5eJnyfJ4871lpiMwY-Hz5E3azxeiWKsjINSLQwjejxWg-F3X0W8ia9HE1FqGFOKung19Ev200ovRf4OspEYYbJa2tATeVVsaQpPer41Fa7fpPdYg2zuDzO1wuvMDcCcNkBcT5XKtH6VBW_SsbW9-UREA7tR5-dfuHwlHMpJJaU8GVcH1r0_ujOaWAH4E-KMeX387km93_10TG39iZ4zVZP8Ut4sJGkUK3MyCBrBtBy2mHql4z73Z9Ab9uxEFRLixWZVRXn1fXfIAdhgykMBWj9i_pCEbl5gileAXiZ5BQvkVQirvYlfkzAxetRYQmdcUyplDrL29Wd3xp-9u9X2oUB3n4yFxYJotbL31-EuFMCL4ByYCIxjcTrfpkc6ZUiRgLtgoZCbEhuMd_UWPlUkUEn6YtGCcUCwz_4wbcc9Ozz4qL8lAQSatsEAv8DqYmz3xQWpU4_T8qC2Zek2G_D7ovJ_WcbXSDQjAX6RvIx6cvGlZReQ7bDZ1QilQTtIx4ityv0R4oY4qaDgmMxHQMbJEtPFcpXCmWmd8\nContent-Type: application/json\n",
+			"url": "http://ltmh-mkp-apimkp.cloudapp.net/v1/participants/14031855",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1468434267007,
+			"name": "Update Participante",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"folder": "ed40d869-0dc0-71d7-f9b6-ed5cb66a7285",
+			"rawModeData": "{\r\n    \"Id\": 14031855,\r\n    \"ClientId\": 306,\r\n    \"ProfileId\": 50435,\r\n    \"ParticipantStatusId\": 1,\r\n    \"LogonTypeId\": 1,\r\n    \"CatalogId\": 60270,\r\n    \"Username\": \"62794141\",\r\n    \"CampaignId\": 60312,\r\n    \"MaritalStatusId\": 6,\r\n    \"Name\": \"EUNICE FRIES DOS SANTOS\",\r\n    \"PersonTypeId\": 1,\r\n    \"CPF\": null,\r\n    \"RG\": null,\r\n    \"Password\": null,\r\n    \"Gender\": 2,\r\n    \"BirthDate\": null,\r\n    \"Address\": [\r\n        {\r\n            \"AddressText\": \"R BENJAMIN ANTONIO ANSAI\",\r\n            \"AddressName\": \"HOME\",\r\n            \"Number\": \"320\",\r\n            \"Complement\": \"LJ 42\",\r\n            \"District\": \"NOVO MUNDO\",\r\n            \"City\": \"CURITIBA\",\r\n            \"State\": \"PR\",\r\n            \"ZipCode\": \"81030490\",\r\n            \"Reference\": \"CENTRO COMERCIAL BRAZILIA\"\r\n        }\r\n    ],\r\n    \"Phones\": [\r\n        {\r\n            \"Ddd\": \"041\",\r\n            \"Number\": \"33278163\",\r\n            \"PhoneType\": 1\r\n        },\r\n        {\r\n            \"Ddd\": \"041\",\r\n            \"Number\": \"99999999\",\r\n            \"PhoneType\": 3\r\n        }\r\n    ],\r\n    \"Emails\": [\r\n        {\r\n            \"EmailText\": \"br.gi3.qaf@gmail.com\",\r\n            \"EmailType\": 1\r\n        }\r\n    ],\r\n    \"Estrutura\": \"America/Sao_Paulo\",\r\n    \"OptInEmail\": false,\r\n    \"OptInComunicacaoFisica\": false,\r\n    \"OptInSms\": false,\r\n    \"OptinAceite\": false,\r\n    \"ConfirmEmail\": null\r\n}"
+		},
+		{
+			"id": "e6104236-b9df-a065-a8d6-cc1c97daaf1d",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:54936/avonAuthentication/1/extrato/2/7c1c921e2ddac4e1efbf0d92e0cd81a2",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1466189214719,
+			"name": "AvonAuthentication - GET",
+			"description": "",
+			"collectionId": "15f65287-97e7-2e50-ef89-26c6bddf0a5a",
+			"responses": [],
+			"rawModeData": "{\r\n\"Reg\" : \"2\",\r\n\"DateUTC\" : \"20161201\",\r\n\"EncriptedKey\" : \"8OgJBs/YLioPeshaUO0/9jyevx6/uqJ/\"\r\n}\r\n"
+		}
+	]
+}

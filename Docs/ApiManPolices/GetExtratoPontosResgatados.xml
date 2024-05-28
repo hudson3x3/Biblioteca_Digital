@@ -1,0 +1,78 @@
+GetExtratoPontosResgatados
+
+<!--
+    IMPORTANT:
+    - Policy elements can appear only within the <inbound>, <outbound>, <backend> section elements.
+    - To apply a policy to the incoming request (before it is forwarded to the backend service), place a corresponding policy element within the <inbound> section element.
+    - To apply a policy to the outgoing response (before it is sent back to the caller), place a corresponding policy element within the <outbound> section element.
+    - To add a policy, place the cursor at the desired insertion point and select a policy from the sidebar.
+    - To remove a policy, delete the corresponding policy statement from the policy document.
+    - Position the <base> element within a section element to inherit all policies from the corresponding section element in the enclosing scope.
+    - Remove the <base> element to prevent inheriting policies from the corresponding section element in the enclosing scope.
+    - Policies are applied in the order of their appearance, from the top down.
+    - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
+-->
+<policies>
+    <inbound>
+        <cors>
+            <allowed-origins>
+                <origin>*</origin>
+            </allowed-origins>
+            <allowed-methods>
+                <method>*</method>
+            </allowed-methods>
+            <allowed-headers>
+                <header>*</header>
+            </allowed-headers>
+            <expose-headers>
+                <header>*</header>
+            </expose-headers>
+        </cors>
+        <cache-lookup vary-by-developer="false" vary-by-developer-groups="false" allow-private-response-caching="true" downstream-caching-type="none">
+            <vary-by-query-parameter>AccountNumber</vary-by-query-parameter>
+        </cache-lookup>
+        <!-- Extract Token from Authorization header parameter -->
+        <set-variable name="request" value="@(context.Request.Body.As<JObject>())" />
+        <!-- Send request to Token Server to validate token (see RFC 7662) -->
+        <send-request mode="new" response-variable-name="tokenstate" timeout="20" ignore-error="true">
+            <set-url>{{Endpoint-Avon-Token}}</set-url>
+            <set-method>POST</set-method>
+            <set-header name="Authorization" exists-action="override">
+                <value>basic QXZvbjpsdG1hdm9uMjAyMg==</value>
+            </set-header>
+            <set-header name="Content-Type" exists-action="override">
+                <value>application/x-www-form-urlencoded</value>
+            </set-header>
+            <set-body>@($"username={"avon"}&password={"2GfooBDtQFGZjuujb59I"}&grant_type={((JObject)context.Variables["request"])["grant_type"]}&accountNumber={((JObject)context.Variables["request"])["accountNumber"]}&catalogId={((JObject)context.Variables["request"])["catalogId"]}&pageName={((JObject)context.Variables["request"])["pageName"]}&imperAcctNr={((JObject)context.Variables["request"])["imperAcctNr"]}&period={((JObject)context.Variables["request"])["period"]}&Order_by={((JObject)context.Variables["request"])["Order_by"]}&CurrentPage={((JObject)context.Variables["request"])["CurrentPage"]}&maxPageSize={((JObject)context.Variables["request"])["maxPageSize"]}&TokenCgt={((JObject)context.Variables["request"])["TokenCgt"]}")</set-body>
+        </send-request>
+        <set-variable name="responseToken" value="@(((IResponse)context.Variables["tokenstate"]).Body.As<JObject>())" />
+        <choose>
+            <!-- Check active property in response -->
+            <when condition="@((string)((JObject)context.Variables["responseToken"])["access_token"] == "")">
+                <!-- Return 401 Unauthorized with http-problem payload -->
+                <return-response>
+                    <set-status code="401" reason="Unauthorized" />
+                    <set-header name="WWW-Authenticate" exists-action="override">
+                        <value>Bearer error="invalid_token"</value>
+                    </set-header>
+                </return-response>
+            </when>
+        </choose>
+        <set-header name="Authorization" exists-action="override">
+            <value>@("Bearer " + (string)((JObject)context.Variables["responseToken"])["access_token"])</value>
+        </set-header>
+        <set-body>@(((JObject)context.Variables["request"]).ToString())</set-body>
+        <rewrite-uri template="/extrato/GetExtratoPontosResgatados" />
+        <base />
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <cache-store duration="3000" />
+        <base />
+    </outbound>
+    <on-error>
+        <base />
+    </on-error>
+</policies>

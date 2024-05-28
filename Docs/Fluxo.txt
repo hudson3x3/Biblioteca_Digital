@@ -1,0 +1,32 @@
+
+1) SFTP para BLOB
+
+Programa que executará no servidor SFTP fisicamente como windows service.
+
+- Executar GrupoLTM.Avon.MMA.SFTPtoBLOB
+
+* Garantir que o server e a APP.config estão com as pastas e devidamente configurados
+* Estimativa: 140Mb - 1min48seg / 54Mb - 48seg (total aprox 2min)
+
+------------------------------------------------------------------------------------------------
+
+2) Monitoramento BLOB > Importação de Arquivo (BulkInsert + Normalização) > Cadastra Fila ServiceBUS
+
+- GrupoLTM.Avon.MMA.BLOBtoBulkServiceBUS
+
+* ServiceBUS configurado com o nome da fila correos no config
+* Garantir APP.config estão devidamente configurados
+* Estimativas: (585mil registros - 1 Lote) total aprox 36min
+  -manipulação de arquivo texto e divisão de lotes e posições arquivo/validações: 175mil linhas por minuto (5min)
+  -bulkInsert - 30mil por minuto(20min)
+  -pre-cadastro participantes - 85mil (2min)
+  -Normalização - 585mil (15min)
+  -Inclusão ServiceBUS - (5seg)
+
+------------------------------------------------------------------------------------------------
+
+3) Insere pontuação já normalizada
+
+- GrupoLTM.Avon.MMA.ServiceBUStoPoints
+
+* Estimativas: (83mil registros - 1 Lote) total aprox 5min

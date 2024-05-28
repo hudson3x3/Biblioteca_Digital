@@ -1,0 +1,52 @@
+
+Banco Dados:
+DEV
+Server: ltmSqlLiveDev.webpremios.com.br,1433
+Database: PRD_DB_AZU_MeuMundoAvon 
+Usuario: aplic.MeuMundoAvonDev
+Senha: AGjMWqGxA#a5nB
+
+HOMOLOG
+Server: Ltmsqllivehml.webpremios.com.br
+Database:PRD_DB_AZU_MeuMundoAvon 
+Usuario: aplic.MeuMundoAvonHml
+Senha: AGjMWqGxA#a5nB
+
+PP
+Server: LtmSqlLivePP.pp.ltm\pp
+Database: PRD_DB_AZU_MeuMundoAvon
+usuario: pp.avon;
+senha: OgKlCAk4ksP@9J
+
+API:
+User: MeuMundoAvonHmlApi\avonmma
+Pass: Ltm123456
+
+Ftp: ftp://waws-prod-blu-027.ftp.azurewebsites.windows.net
+User: MeuMundoAvonDev\avonmma
+Pass: Ltm123456
+
+
+FTP LTM Homologa��o Avon - Cat�logo 4
+Acesso: sftp.grupoltm.com.br
+Usuario: AvonMMA-HML
+Senha: 9F5KLEIX
+
+FTP LTM Prod Avon
+Acesso: 
+
+
+Market Place - AppId
+ClientId: 1e68a541d29749a982d6029b51b9ff0b
+ClientSecret: @von!2#4%
+Base64 - Header
+Basic MWU2OGE1NDFkMjk3NDlhOTgyZDYwMjliNTFiOWZmMGI6QHZvbiEyIzQl
+
+
+Wireframe
+URL = http://yi0whn.axshare.com
+SENHA = avonMMA2016
+
+BLOB - PRD
+yIcoZnOARf5LNFJN9ALUHWwUITzB/lRg/P+wYspOATrn94Simo/SmciEDT1/mZiy/Tcw4EKpyIVjrF66hw1/Kw==
+meumundoavonprd

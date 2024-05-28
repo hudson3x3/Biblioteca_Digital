@@ -1,0 +1,74 @@
+<!--Principal editado-->
+
+<policies>
+	<inbound>
+		<cors>
+			<allowed-origins>
+				<origin>*</origin>
+			</allowed-origins>
+			<allowed-methods>
+				<method>*</method>
+			</allowed-methods>
+			<allowed-headers>
+				<header>*</header>
+			</allowed-headers>
+			<expose-headers>
+				<header>*</header>
+			</expose-headers>
+		</cors>
+		<set-variable name="request" value="@((context.Request.Body == null) ? "" : (string)context.Request.Body.As<string>(preserveContent: true))" />
+		<send-request mode="new" response-variable-name="access_token" timeout="20" ignore-error="true">
+			<set-url>@("https://apiman.webpremios.com.br/avon/token")</set-url>
+			<set-method>POST</set-method>
+			<set-header name="Content-Type" exists-action="override">
+				<value>application/x-www-form-urlencoded</value>
+			</set-header>
+			<set-header name="Authorization" exists-action="override">
+				<value>Basic QXZvbjpsdG1hdm9uMjAyMg==</value>
+			</set-header>
+			<set-header name="Ocp-Apim-Subscription-Key" exists-action="override">
+				<value>f1fc526404c3492e9f26a7ed31c77ca1</value>
+			</set-header>
+			<set-body>@{ 
+            JObject inBody = context.Request.Body.As<JObject>();
+            string accountNumber = inBody.Property("accountNumber").ToString().Replace(":", "=").Replace("\"", "").Replace(" ", "");
+            string catalogId = inBody.Property("catalogId").ToString().Replace(":", "=").Replace("\"", "").Replace(" ", "");
+            string grant_type = inBody.Property("grant_type").ToString().Replace(":", "=").Replace("\"", "").Replace(" ", "");
+            string pageName = inBody.Property("pageName").ToString().Replace(":", "=").Replace("\"", "").Replace(" ", "");
+            string TokenGetInfo = inBody.Property("TokenGetInfo").ToString().Replace(":", "=").Replace("\"", "").Replace(" ", "");
+            string bodyStr = $"{accountNumber}&{catalogId}&{grant_type}&{pageName}&{TokenGetInfo}&imperAcctNr=&username=avon&password=2GfooBDtQFGZjuujb59I";
+            return bodyStr; 
+        }</set-body>
+		</send-request>
+		<set-variable name="responseToken" value="@(((IResponse)context.Variables["access_token"]).Body.As<JObject>())" />
+		<choose>
+			<when condition="@((string)((JObject)context.Variables["responseToken"])["access_token"] == "")">
+				<return-response>
+					<set-status code="401" reason="Unauthorized" />
+					<set-header name="WWW-Authenticate" exists-action="override">
+						<value>Bearer error="invalid_token"</value>
+					</set-header>
+				</return-response>
+			</when>
+		</choose>
+		<set-header name="Authorization" exists-action="override">
+			<value>@("Bearer " + ((JObject)context.Variables["responseToken"])["access_token"])</value>
+		</set-header>
+		<set-header name="Content-Type" exists-action="override">
+			<value>application/json</value>
+		</set-header>
+		<set-body>        @((string)context.Variables["request"])
+        </set-body>
+		<rewrite-uri template="/extrato/GetNatal" />
+		<base />
+	</inbound>
+	<outbound>
+		<base />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+	<backend>
+		<base />
+	</backend>
+</policies>

@@ -1,0 +1,3 @@
+Hash MD5 = 62794141AvonLtm (resultado X2 - MD5 maiúsculo)
+
+IMPORTANT: Não deixar Id da tabela PontuacaoRecebida como Identity

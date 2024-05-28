@@ -1,0 +1,75 @@
+
+Api
+
+* Caso não haja Serviço de Aplicação API MeuMundoAvonAPI, criar.
+
+Trocar chaves e urls de MktPlace para Produção 
+(mktPlace_appId,mktPlace_tokenCatalog,mktPlace_ParticipantInsert,mktPlace_clientId,mktPlace_profileId,mktPlace_campaignId)
+
+Trocar chaves e urls de Avon para Produção 
+(userIdAvon,passAvon,devkeyAvon,urlLoginAvon,urlGetProfileAvon)
+
+Trocar chave 'urlSite' para url de produção (ex. http://hml.meumundoavon.com.br)
+
+Publicação de API (Serviço de Aplicativo)
+
+--------------------------
+
+Site
+
+* Caso não haja Serviço de Aplicação Site MeuMundoAvon, criar.
+
+Ajustar app/Global.js
+var global = {
+    service: Api MMA Produção (ex. http://localhost:51145/api)
+    urlAvon: 'https://www.br.avon.com/REPSuite/loginMain.page'
+}
+
+
+WebConfig
+
+GrupoLTMWebSmart = Banco de Produção
+	Replicar Banco Hml (meumundoavonhml.database.windows.net) p/ Prod
+	Executar Script de Limpeza de base em Prod
+
+urlSite = url produção (ex. http://hml.meumundoavon.com.br)
+oAuth_url = Api MMA Produção (ex. http://apihml.meumundoavon.com.br/api/token)
+
+Publicação de Site (Serviço de Aplicativo)
+
+--------------------------
+
+Admin
+
+Azure
+
+* Criar um 'Diretório Virtual' dentro do Serviço de Aplicativo (MeuMundoAvon) 'Site' com nome de 'Admin'
+
+* Criar Blob de produção (Conta de Armazenamento)
+	Cruar Contêiner 'file' (política de acesso - Particular)
+	Criar Contêiner 'ltm'	(política de acesso - Contêiner (público read))
+
+* Replicar conteúdo do Blob de HML (https://meumundoavonhml.blob.core.windows.net) para produção (conteiners file e ltm)
+	
+
+WebConfig
+
+GrupoLTMWebSmart = Banco de Produção
+CloudStorage = BlobStorage de produção
+
+Ajustar chaves de 'Storage' e 'Content'
+
+Ajustar chave config Storage.Token para Token de authorização em cima do contêiner 'file' gerada no programa AzureExplorer
+
+Publicação de API (Diretório virtual /admin do Serviço de Aplicativo 'Site')
+
+-------------------------
+
+* Caso não haja banco de dados MeuMundoAvon, favor criar.
+
+* Replicar banco de HML (meumundoavonhml.database.windows.net) em Prod. 
+
+Executar Script de Update nas tabelas de 
+
+
+
