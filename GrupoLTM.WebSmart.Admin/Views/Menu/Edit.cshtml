@@ -1,0 +1,70 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model GrupoLTM.WebSmart.Admin.Models.MenuModel
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+
+<form class="form-horizontal" role="form">
+    <fieldset>
+        <legend>
+            <h2>Menu Site - Editar</h2>
+        </legend>
+        <div>
+            <blockquote>
+              <p>Preencha os campos abaixo e clique em Salvar.</p>
+              <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <input type="hidden" class="span3" maxlength="255" id="Id" name="Id" value="@Model.Id" />
+
+            <div class="alerta"></div>
+
+            <label>Nome:*</label>
+            <input type="text" class="span3" maxlength="255" id="Nome" name="Nome" validar validar-msg="Nome" value="@Model.Nome" disabled/>
+
+            <label>Titulo:*</label>
+            <input type="text" class="span3" maxlength="50" id="Titulo" name="Titulo" validar validar-msg="Titulo" value="@Model.Titulo" />
+
+
+            <!--Para redes sociais, habilitar a edição do link-->
+            @{
+                if (Model.MenuPaiId == Convert.ToInt32(GrupoLTM.WebSmart.Domain.Enums.EnumDomain.Menu.MenuRedeSocial))
+                {
+                    <label>Link:*</label>
+                    <input type="text" class="span3" maxlength="50" id="Link" name="Link" validar validar-msg="Link" value="@Model.Link" />
+                }
+            }
+
+            <label>Ativo:*</label>
+            <div>
+                @Html.CheckBox("Ativo", (Model.Ativo == null || Model.Ativo == false ? false : true), new { @style = "margin-left:5px;margin-top:0px;margin-bottom:5px" })
+            </div>
+
+            <label>Ordem:*</label>
+            <input type="text" class="span1" maxlength="255" id="Ordem" name="Ordem" validar validar-msg="Ordem" value="@Model.Ordem" />
+
+            <label>Perfis de Acesso:*</label>
+            <select id="PerfilId" name="PerfilId" multiple="multiple" class="multiselect"></select>
+
+            <label>Estrutura de Acesso:*</label>
+            <select id="EstruturaId" name="EstruturaId" multiple="multiple" class="multiselect"></select>
+
+            <br /><br />
+            
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="voltar btn btn-primary" type="button">Voltar</button>
+        
+        </div>
+    </fieldset>
+
+
+    <!--hidden fields-->
+    <input type="hidden" id="hflistPerfilId" name="hflistPerfilId" value="@(Html.Raw(Json.Encode(Model.ArrPerfilId)))">
+    <input type="hidden" id="hflistEstrururaId" name="hflistEstrururaId" value="@(Html.Raw(Json.Encode(Model.ArrEstruturaId)))">
+
+
+</form>
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/Menu/Edit.js", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>

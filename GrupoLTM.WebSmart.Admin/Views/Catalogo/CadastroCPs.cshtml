@@ -1,0 +1,107 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model List<GrupoLTM.WebSmart.DTO.CatalogoCPModel>
+@{
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+@section css {
+    <link rel="stylesheet" href="@Url.Content(string.Format("{0}content/font-awesome/css/font-awesome.min.css", Settings.Caminho.ContentAdmin))" />
+}
+
+<fieldset>
+    <legend>
+        <h2>@ViewBag.Catalogo</h2>
+    </legend>
+
+    <div>
+        <blockquote>
+            <p>Preencha os campos abaixo e clique em Salvar.</p>
+            <small><cite title="Source Title">Para adicionar um novo empréstimo clique no botão "+".</cite></small>
+        </blockquote>
+
+        <div class="alerta"></div>
+
+        <table id="tbCPs" class="table" style="width: 60%;">
+            <thead>
+                <tr>
+                    <th width="35%">Matrícula</th>
+                    @*<th width="35%">Data Inicio</th>*@
+                    @*<th width="35%">Profile ID</th>*@
+                    <th width="10%">Ativo</th>
+                    <th width="20%">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="template" data-id="0" style="display: none;">
+                    <td><input data-name="cp" class="form-control" type="text" /></td>
+                    @*<td><input data-name="dataInicio" class="form-control" type="date" /></td>
+                    <td><input data-name="profileId" class="form-control" type="number" /></td>*@
+                    <td><input data-name="ativo" type="checkbox" /></td>
+                    <td>
+                        <button data-id="btnAdd" class="btn btn-small btn-primary">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                        <button data-id="btnRemove" class="btn btn-small btn-danger">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+                @if (Model.Count > 0)
+                {
+                    for(var i = 0; i < Model.Count; i++)
+                    {
+                        <tr data-id="@Model[i].Id">
+                            <td><input data-name="cp" class="form-control" value="@Model[i].CP" type="text" /></td>
+                            @*<td><input data-name="dataInicio" class="form-control" value="@Model[i].DataInicio" type="date" /></td>
+                            <td><input data-name="profileId" class="form-control" value="@Model[i].ProfileId" type="number" /></td>*@
+                            <td><input data-name="ativo" type="checkbox" checked="@Model[i].Ativo" /></td>
+                            <td>
+                                @*@if (@Model[i].Id >= 11)
+                                {*@
+                                    <button data-id="btnAdd" class="btn btn-small btn-primary">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                @*}*@
+
+                                @if (i >= 0)
+                                {
+                                    <button data-id="btnRemove" class="btn btn-small btn-danger">
+                                        <i class="fa fa-remove"></i>
+                                    </button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr data-id="0">
+                        <td><input data-name="cp" class="form-control" type="text" /></td>
+                        @*<td><input data-name="dataInicio" class="form-control" type="date" /></td>
+                        <td><input data-name="profileId" class="form-control" type="number" /></td>*@
+                        <td><input data-name="ativo" type="checkbox" /></td>
+                        <td>
+                            <button data-id="btnAdd" class="btn btn-small btn-primary">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <button id="btnSalvar" type="button" class="btn btn-success">Salvar</button>
+    <button id="btnVoltar" type="button" class="btn btn-primary">Voltar</button>
+
+</fieldset>
+
+@Html.Hidden("UrlSalvar", Url.Action("InserirCPs", "Catalogo"))
+@Html.Hidden("UrlCatalogos", Url.Action("Index", "Catalogo"))
+@Html.Hidden("catalogoId", (int)ViewBag.CatalogoId)
+
+<!-- TODO: Colocar caminho do BLOB -->
+<script type="text/javascript" src="@Url.Content(string.Format("{0}content/js/Pages/Catalogo/CadastroCPs.js", Settings.Caminho.ContentAdmin))"></script>
+

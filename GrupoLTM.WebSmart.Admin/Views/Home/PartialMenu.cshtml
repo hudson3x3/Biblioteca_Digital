@@ -1,0 +1,30 @@
+﻿@model List<GrupoLTM.WebSmart.Admin.Models.MenuModel>
+
+
+<ul class="nav">
+
+    @*<li><a href="@Url.Action("Index", "Home")"><i class="icon-home icon-white"></i> Home</a></li>*@
+    @{
+        foreach (var item in Model.Where(x => x.MenuPaiId == Convert.ToInt32(GrupoLTM.WebSmart.Domain.Enums.EnumDomain.Menu.MenuAdmin)).ToList())
+        {
+            if (Model.Where(x => x.MenuPaiId == item.Id).ToList().Count == 0)
+            {
+                <li><a href="@Url.Content("~/"+ @item.Link)"><i class="@item.Icone"></i> @item.Titulo</a></li>
+            } 
+            else
+            {
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown"><i class="@item.Icone"></i> @item.Titulo</a>
+                    <ul class="dropdown-menu">
+                        @{
+                            foreach (var itemMenu in Model.Where(x => x.MenuPaiId == item.Id).ToList())
+                            {
+                                <li><a href="@Url.Content("~/" + @itemMenu.Link)">@itemMenu.Titulo</a></li>                            
+                            }
+                        }
+                    </ul>
+                </li>
+            }
+        }
+    }
+</ul>  

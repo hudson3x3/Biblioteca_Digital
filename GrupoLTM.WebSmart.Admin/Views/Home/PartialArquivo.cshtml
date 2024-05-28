@@ -1,0 +1,98 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model List<GrupoLTM.WebSmart.Admin.Models.ArquivoModel>
+
+<style>
+    .table {
+        font-size: 12px;
+    }
+</style>
+
+<h6>
+    Histórico dos arquivos enviados.
+</h6>
+<table cellpadding="0" cellspacing="0" border="0" class="table tables-striped table-bordered span7" style="margin-left:0px;" id="TabelaArquivo">
+    <thead>
+        <tr>
+            <th class="span4">Nome</th>
+            <th class="span4">Status Arquivo</th>
+            <th class="span2">Data Inclusão</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+
+            foreach (var item in Model)
+            {
+                var caminho = "";
+                switch (item.eTipoArquivo)
+                {
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.Estrurura:
+                        caminho = "Estrutura";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CreditoPontos:
+                        caminho = "pontuacao";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.ApuracaoVendeuGanhou:
+                        caminho = "ApuracaoVendeuGanhou";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.ParticipanteLote:
+                        caminho = "Participante";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.Hierarquia:
+                        caminho = "hierarquia";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.MetaPessoa:
+                        caminho = "campanha/metaresultado/metapessoa";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CampanhaGrupoItemPontos:
+                        caminho = "campanha/vendeuganhou";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.AssociacaoGrupoItem:
+                        caminho = "campanha/metaresultado/associacaogrupoItem";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.MetaGrupoItem:
+                        caminho = "campanha/metaresultado/grupoItem";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.GrupoItem:
+                        caminho = "campanha/metaresultado/grupoitem";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CalculadoVendeuGanhouPorItem:
+                        caminho = "campanha/calculado/vendeuganhou/poritem";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CalculadoVendeuGanhouPorPessoa:
+                        caminho = "campanha/calculado/vendeuGanhou/porpessoa";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CalculadoVendeuGanhouPorRankingporPessoa:
+                        caminho = "campanha/calculado/vendeuganhou/rankingporpessoa";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CalculadoMetaResultadoPorItem:
+                        caminho = "campanha/calculado/metaresultado/poritem";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CalculadoMetaResultadoPorPessoa:
+                        caminho = "campanha/calculado/metaresultado/porpessoa";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.CalculadoMetaResultadoRanking:
+                        caminho = "campanha/calculado/cetaresultado/ranking";
+                        break;
+                    case GrupoLTM.WebSmart.Domain.Enums.EnumDomain.TipoArquivo.UploadFaixaGrupoItem:
+                        caminho = "campanha/metaresultado/faixaatingimentogrupoitem/";
+                        break;
+                    default:
+                        caminho = "";
+                        break;
+                }
+
+
+                var link = Settings.Caminho.StoragePath + caminho + "/" + item.NomeGerado + Settings.Caminho.StorageToken;
+                <tr>
+                    <td><a href="@link">@item.Nome</a></td>
+                    <td>@item.StatusArquivo</td>
+                    <td>@item.DataInclusao.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            }
+        }
+
+
+    </tbody>
+</table>
+

@@ -1,0 +1,40 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model GrupoLTM.WebSmart.Admin.Models.MenuModel
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+
+<form class="form-horizontal" role="form">
+    <fieldset>
+        <legend>
+            <h2>Menu Site - Lote</h2>
+        </legend>
+        <div>
+            <blockquote>
+              <p>Preencha os campos abaixo e clique em Salvar.</p>
+              <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <div class="alerta"></div>
+
+            <label>Menu:*</label>
+            <select id="MenuId" name="MenuId" multiple="multiple" class="multiselect"></select>
+
+            <label>Perfis de Acesso:*</label>
+            <select id="PerfilId" name="PerfilId" multiple="multiple" class="multiselect"></select>
+
+            <label>Estrutura de Acesso:*</label>
+            <select id="EstruturaId" name="EstruturaId" multiple="multiple" class="multiselect"></select>
+
+            <br /><br />
+            
+            <button class="btn btn-primary" type="submit">Salvar</button>
+            <button class="voltar btn btn-success" type="button">Cancelar</button>
+        
+        </div>
+    </fieldset>
+</form>
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/Menu/Lote.js", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>

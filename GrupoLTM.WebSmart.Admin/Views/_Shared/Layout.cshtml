@@ -1,0 +1,265 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@{
+    ViewBag.Title = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="@Url.Content(string.Format("{0}content/ico/icon-favicon.ico", Settings.Caminho.ContentAdmin))" rel="shortcut icon">
+
+    <!-- Le styles -->
+
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap-responsive.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap-fileupload.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap-fileupload.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+    <link href="@Url.Content(string.Format("{0}content/css/jquery-te-1.4.0.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap-multiselect.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap-lightbox.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+    <link href="@Url.Content(string.Format("{0}content/font-awesome/css/font-awesome.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet" />
+
+    <link href="@Url.Content(string.Format("{0}content/css/select2.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("{0}content/css/select2-bootstrap.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet" />
+
+    <link href="@Url.Content(string.Format("{0}content/css/jquery-ui/jquery-ui.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("{0}content/css/jquery-ui/jquery.ui.theme.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format("{0}content/css/jquery-ui/jquery.ui.datepicker.min.css", Settings.Caminho.ContentAdmin))" rel="stylesheet" />
+
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            height: 100%;
+        }
+
+        .nav a {
+            font-size: 14px;
+        }
+
+        .nav i {
+            color: #FFF;
+        }
+
+        #modalSimNao button {
+            width: 75px;
+        }
+    </style>
+    <link href="@Url.Content(string.Format("{0}content/css/bootstrap-responsive.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content(string.Format("{0}content/ico/apple-touch-icon-144-precomposed.png", Settings.Caminho.ContentAdmin))">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content(string.Format("{0}content/ico/apple-touch-icon-114-precomposed.png", Settings.Caminho.ContentAdmin))">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content(string.Format("{0}content/ico/apple-touch-icon-72-precomposed.png", Settings.Caminho.ContentAdmin))">
+    <link rel="apple-touch-icon-precomposed" href="@Url.Content(string.Format("{0}content/ico/apple-touch-icon-57-precomposed.png", Settings.Caminho.ContentAdmin))">
+    <link rel="shortcut icon" href="@Url.Content(string.Format("{0}content/img/favicon.ico", Settings.Caminho.ContentAdmin))">
+
+    @RenderSection("css", false)
+
+    <script>var BASE_URL = "@Settings.Caminho.BaseUrl";</script>
+    <script src="@Url.Content(string.Format("{0}content/js/Jquery/jquery-1.9.1.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/Jquery/jquery-ui.js", Settings.Caminho.ContentAdmin))"></script>
+
+    <script src="@Url.Content(string.Format("{0}content/js/widgets.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-transition.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-alert.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-modal.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-dropdown.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-scrollspy.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-tab.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-tooltip.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-popover.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-button.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-collapse.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-carousel.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-typeahead.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-inputmask.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-inputmask.min.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-fileupload.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-fileupload.min.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/jquery-te-1.4.0.min.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/bootstrap-multiselect.js", Settings.Caminho.ContentAdmin))"></script>
+
+    <script src="@Url.Content(string.Format("{0}content/js/jquery.maskMoney.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/jquery.maskedinput-1.3.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/utils.js?v=1.0", Settings.Caminho.ContentAdmin))"></script>
+
+    <script src="@Url.Content(string.Format("{0}content/js/main.js?v=2.0", Settings.Caminho.ContentAdmin))"></script>
+
+    <script src="@Url.Content(string.Format("{0}content/js/jquery.blockUI.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/Global.js?v=1.5", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/ddslick/jquery.ddslick.min.js", Settings.Caminho.ContentAdmin))"></script>
+
+    <script src="@Url.Content(string.Format("{0}content/js/select2/select2.min.js", Settings.Caminho.ContentAdmin))"></script>
+    <script src="@Url.Content(string.Format("{0}content/js/select2/pt-BR.min.js", Settings.Caminho.ContentAdmin))"></script>
+
+    <script src="@Url.Content(string.Format("{0}content/js/moment-with-locales.js", Settings.Caminho.ContentAdmin))"></script>    
+
+    @RenderSection("scripts", false)
+
+</head>
+
+<body>
+    @{
+        if (GrupoLTM.WebSmart.Admin.Helpers.LoginHelper.IsLoggedOn())
+        {
+            <script language="javascript" type="text/javascript">
+                $(document).ready(function () {
+                    Global.ListaMenuAdmin($("#divMenu"));
+                });
+
+                let request = window.XMLHttpRequest.prototype.open;
+
+                window.XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+                    this.addEventListener('load', function () {
+                        if (this.status == 401 || this.status == 412) {
+                            let admin = window.location.href.toLowerCase().includes('admin');
+                            window.location.href = admin ? '/Admin/Login/Index' : '/Login/Index';
+                        }
+                    });
+
+                    return request.apply(this, arguments);
+                }
+
+            </script>
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!--Menu dinamico-->
+                        <div class="nav-collapse collapse" id="divMenu">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!-- Modal -->
+    <div id="modalMensagens" class="modal fade hidden">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Modal Confirmar True/False -->
+    <div id="modalConfirmarTrueFalse" class="modal fade hidden">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btnConfirmar" data-dismiss="modal">Confirmar</button>
+                    <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- Modal Sim/Não -->
+    <div id="modalSimNao" class="modal fade hidden">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btnConfirmar" data-dismiss="modal">Sim</button>
+                    <button type="button" class="btn" data-dismiss="modal">Não</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="modalConfirmarVisualizar" class="modal fade hidden">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-visualizar" data-dismiss="modal">Visualizar</button>
+                    <button type="button" class="btn" data-dismiss="modal">Confirmar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="modalConfirmar" class="modal fade hidden">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Confirmar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    @Html.Hidden("urlLoader", Url.Content(string.Format("{0}content/img/220.GIF", Settings.Caminho.ContentAdmin)))
+
+</body>
+</html>

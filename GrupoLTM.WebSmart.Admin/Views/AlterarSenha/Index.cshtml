@@ -1,0 +1,32 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@{
+    ViewBag.Title = "Alterar Senha";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/AlterarSenha/Index.js?v=1.2", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>
+
+<form>
+    <fieldset>
+        <legend>
+            <h2>Alterar Senha</h2>
+        </legend>
+        <div>
+            <blockquote>
+                <p>Preencha os campos abaixo e clique em Salvar.</p>
+                <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <div class="alerta"></div>
+            <label>Senha atual:*</label>
+            <input type="password" id="senhaAtual" name="senhaAtual" class="span3" validar validar-msg="Senha Atual" />
+            <label>Nova senha:*</label>
+            <input type="password" id="novaSenha" name="novaSenha" maxlength="20" class="span3" validar validar-msg="Nova Senha" />
+            <label>Confirmar senha:*</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" maxlength="20" class="span3" validar validar-msg="Confirmar Senha" />
+            <br />
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="voltar btn btn-primary" alterar="@GrupoLTM.WebSmart.Admin.Helpers.LoginHelper.AlterarSenha()" type="button">Voltar</button>
+        </div>
+    </fieldset>
+</form>

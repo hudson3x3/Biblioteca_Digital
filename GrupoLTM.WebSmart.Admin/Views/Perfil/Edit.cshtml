@@ -1,0 +1,48 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model GrupoLTM.WebSmart.Admin.Models.PerfilModel
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+
+<form class="form-horizontal" role="form">
+    <fieldset>
+        <legend>
+            <h2>Perfil - Editar</h2>
+        </legend>
+        <div>
+            <blockquote>
+              <p>Preencha os campos abaixo e clique em Salvar.</p>
+              <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <input type="hidden" class="span3" maxlength="50" id="Id" name="Id" value="@Model.Id" />
+
+            <div class="alerta"></div>
+
+            <label>Perfil:*</label>
+            <input type="text" class="span3" maxlength="255" id="Nome" name="Nome" validar validar-msg="Perfil" value="@Model.Nome" />
+
+            <label>Perfil Superior:*</label>
+            <select id="PaiId" name="PaiId"></select>
+
+            @*<label>Nível Hierarquia (Até 10 níveis):*</label>
+            <select id="NivelHierarquia" name="NivelHierarquia"></select>*@
+
+
+            <br /><br />
+            
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="voltar btn btn-primary" type="button">Voltar</button>
+        
+        </div>
+    </fieldset>
+
+
+    <input type="hidden" id="hfPaiId" name="hfPaiId" value="@Model.PaiId">
+    <input type="hidden" id="hfNivelHierarquia" name="hfNivelHierarquia" value="@Model.NivelHierarquia">
+</form>
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/Perfil/Edit.js", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>
+

@@ -1,0 +1,32 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model GrupoLTM.WebSmart.Admin.Models.MeusDadosModel
+@{
+    ViewBag.Title = "Meus dados";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+<form>
+    <fieldset>
+        <legend>
+            <h2>Meus Dados</h2>
+        </legend>
+        <div>
+            <blockquote>
+              <p>Preencha os campos abaixo e clique em Salvar.</p>
+              <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <div class="alerta"></div>
+
+            <label>Nome:*</label><input type="text" id="nome" name="nome" class="span4" maxlength="255" validar validar-msg="Nome" value="@Model.nome"/>
+            <label>Login:</label><input type="text" id="login" name="login" class="span4" maxlength="100" validar validar-msg="Login" value="@Model.login"/>
+            <label>E-mail:*</label><input type="text" id="email" name="email" class="span4" maxlength="255" validar validar-msg="E-mail" Email value="@Model.email"/>
+            <br />
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="voltar btn btn-primary" type="button">Voltar</button>
+        
+        </div>
+    </fieldset>
+</form>
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/MeusDados/Index.js", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>

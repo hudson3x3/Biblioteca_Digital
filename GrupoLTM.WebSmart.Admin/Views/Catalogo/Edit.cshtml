@@ -1,0 +1,70 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model GrupoLTM.WebSmart.DTO.CatalogoModel
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+
+<form class="form-horizontal" role="form">
+    <fieldset>
+        <legend>
+            <h2>Livro/Revista - Editar</h2>
+        </legend>
+        <div>
+            <blockquote>
+                <p>Preencha os campos abaixo e clique em Salvar.</p>
+                <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <input type="hidden" class="span3" maxlength="255" id="Id" name="Id" value="@Model.Id" />
+
+            <div class="alerta"></div>
+
+            <label>Nome:*</label>
+            <input type="text" class="span3" maxlength="50" id="Nome" name="Nome" validar validar-msg="Nome" value="@Model.Nome" />
+
+            <label>Autor:*</label>
+            <input type="text" class="span2" maxlength="14" id="Autor" name="Autor" validar validar-msg="Autor" value="@Model.Autor" />
+
+            <label>Código de controle interno:*</label>
+            <input type="text" class="span3" maxlength="50" id="Codigo" name="Codigo" validar validar-msg="Codigo" value="@Model.Codigo" />
+
+            <label>Quantidade:*</label>
+            <input type="text" class="span3" maxlength="50" id="Qtd" name="Qtd" validar validar-msg="Qtd" value="@Model.Qtd" />
+
+            @*<label>Url Catálogo Market Place:*</label>
+        <input type="text" class="span3" id="UrlCatalogMktPlace" name="UrlCatalogMktPlace" validar validar-msg="UrlCatalogMktPlace" value="@Model.UrlCatalogMktPlace" />*@
+
+            @*<label>Data Início:*</label>
+        <input type="text" class="span2" maxlength="14" id="DataInicio" name="DataInicio" validar data validar-msg="Data Início" value="@Model.DataInclusao" />
+
+        <label>Data Fim:*</label>
+        <input type="text" class="span2" maxlength="14" id="DataFim" name="DataFim" validar data validar-msg="Data Fim" value="@Model.DataAlteracao" />*@
+
+            @*<label>Faz primeiro acesso?*</label>
+        <input type="checkbox" class="span3" id="PrimeiroAcesso1" name="PrimeiroAcesso1" checked="@Model.PrimeiroAcesso"  />*@
+
+            @*<label>Id da Campanha:*</label>
+        <input type="text" class="span3" maxlength="50" id="idCampanha" name="idCampanha" validar validar-msg="idCampanha" value="@Model.IdCampanha" />*@
+
+            @*<label>Id da Empresa:*</label>
+        <input type="text" class="span3" maxlength="50" id="idEmpresa" name="idEmpresa" validar validar-msg="idEmpresa" value="@Model.IdEmpresa" />
+
+        <label>Id Origem:*</label>
+        <input type="text" class="span3" maxlength="50" id="idOrigem" name="idOrigem" validar validar-msg="idOrigem" value="@Model.IdOrigem" />
+
+        <label>App Id:*</label>
+        <input type="text" class="span3" maxlength="256" id="AppIdMktPlace" name="AppIdMktPlace" validar validar-msg="AppIdMktPlace" value="@Model.AppIdMktPlace"/>*@
+
+            <br /><br />
+
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="voltar btn btn-primary" type="button">Voltar</button>
+
+        </div>
+    </fieldset>
+
+</form>
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/Catalogo/Edit.js", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>

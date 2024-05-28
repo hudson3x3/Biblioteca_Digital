@@ -1,0 +1,29 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model IEnumerable<GrupoLTM.WebSmart.Admin.Models.MenuModel>
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+<link href="@Url.Content(string.Format("{0}content/css/bootstrap-home.css", Settings.Caminho.ContentAdmin))" rel="stylesheet">
+
+<br />
+<br />
+<br />
+<br />
+<div style=text-align:center>
+    <p><font size=5 color="black"><b>COLÉGIO ESTADUAL DEPUTADO PEDRO FERNANDES</b></font size=5 color="black"></p>
+    <p><font size=5 color="black"><b>BIBLIOTECA DIGITAL</b></font size=5 color="black"></p>
+</div>
+<br />
+<br />
+<br />
+<br />
+<div style=text-align:center>
+    <p><font size=3 color="black"><b>Bem vindo a nossa biblioteca digital. Para começar, selecione as opções no menu acima.</b></font size=3 color="black"></p>
+</div>
+    <div id="rodape">
+        <img src="../../content/img/Image-biblioteca.jpeg" />
+    </div>
+    @*<body background="../../content/img/Image-biblioteca.jpeg" bgproperties="fixed">
+        </body>*@

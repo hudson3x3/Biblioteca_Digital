@@ -1,0 +1,44 @@
+﻿@using GrupoLTM.WebSmart.Infrastructure.Configuration
+@model GrupoLTM.WebSmart.Admin.Models.PerfilModel
+@{
+    ViewBag.Title = "Cadastrar";
+    Layout = "~/Views/_Shared/Layout.cshtml";
+}
+
+
+<form class="form-horizontal" role="form">
+    <fieldset>
+        <legend>
+            <h2>Perfil - Cadastrar</h2>
+        </legend>
+        <div>
+            <blockquote>
+              <p>Preencha os campos abaixo e clique em Salvar.</p>
+              <small><cite title="Source Title">Os campos com (*) são de preenchimento obrigatório.</cite></small>
+            </blockquote>
+
+            <div class="alerta"></div>
+
+            <label>Perfil:*</label>
+            <input type="text" class="span3" maxlength="50" id="Nome" name="Nome" validar validar-msg="Perfil" />
+
+            <label>Perfil Superior:</label>
+            <select id="PaiId" name="PaiId"></select>
+
+            @*<label>Nível Hierarquia (Até 10 níveis):*</label>
+            <select id="NivelHierarquia" validar validar-msg="Nível Hierarquia" name="NivelHierarquia"></select>
+            <br />
+            <br />*@
+            
+            <br />
+            <br />
+
+            <button class="btn btn-success" type="submit">Salvar</button>
+            <button class="voltar btn btn-primary" type="button">Voltar</button>
+        
+        </div>
+    </fieldset>
+</form>
+
+<script src="@Url.Content(string.Format("{0}content/js/Pages/Perfil/Create.js", Settings.Caminho.ContentAdmin))" type="text/javascript"></script>
+
