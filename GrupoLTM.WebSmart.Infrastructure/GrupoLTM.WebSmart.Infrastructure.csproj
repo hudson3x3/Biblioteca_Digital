@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PostSharp.6.9.6\build\PostSharp.props" Condition="Exists('..\packages\PostSharp.6.9.6\build\PostSharp.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7ABDD271-FCAC-435D-9F98-4E9B1773D0F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoLTM.WebSmart.Infrastructure</RootNamespace>
+    <AssemblyName>GrupoLTM.WebSmart.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>\obj\Debug\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <SkipPostSharp>True</SkipPostSharp>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>\obj\Release\</IntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|AnyCPU'">
+    <OutputPath>bin\Hml\</OutputPath>
+    <IntermediateOutputPath>\obj\Debug\Hml\</IntermediateOutputPath>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>\obj\Debug\Dev\</IntermediateOutputPath>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|AnyCPU'">
+    <OutputPath>bin\Prd\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>\obj\Debug\Prd\</IntermediateOutputPath>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.MeuMundoAvon_PRD|AnyCPU'">
+    <OutputPath>bin\Web.MeuMundoAvon_PRD\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>\obj\Debug\Web.MeuMundoAvon_PRD\</IntermediateOutputPath>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|x86'">
+    <OutputPath>bin\x86\Hml\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|x86'">
+    <OutputPath>bin\x86\Dev\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|x86'">
+    <OutputPath>bin\x86\Prd\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.MeuMundoAvon_PRD|x86'">
+    <OutputPath>bin\x86\Web.MeuMundoAvon_PRD\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CasaNovaCom.WebCampanhas.Infra">
+      <HintPath>_lib\CasaNovaCom.WebCampanhas.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.3.1.3.3\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelDataReader.2.1.2.3\lib\net20\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_lib\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HumanAPIClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>_lib\HumanAPIClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LTM.Logging">
+      <HintPath>..\packages\LTM.Logging.1.0.0-ci-20170124-190332\lib\LTM.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Excel-DNA.Interop.14.0.1\lib\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=6.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.6.2.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Excel-DNA.Interop.14.0.1\lib\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=6.9.6.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\packages\PostSharp.Redist.6.9.6\lib\net45\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.0.0\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.0.56.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.4.0.56\lib\net40\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.0.56\lib\portable-wp80+sl5+net40+win8+wpa81+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.0.56.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Redis.4.0.56\lib\net40\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.56.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.0.56\lib\net40\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.0.488\lib\net40\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\TypeFieldAttribute.cs" />
+    <Compile Include="Cache\CacheAttribute.cs" />
+    <Compile Include="Cache\RedisService.cs" />
+    <Compile Include="Cache\WebCache.cs" />
+    <Compile Include="Configuration\Settings.cs" />
+    <Compile Include="Converter\DataConverter.cs" />
+    <Compile Include="Cripto\AES.cs" />
+    <Compile Include="Cripto\EncDec.cs" />
+    <Compile Include="Cripto\HexEncoding.cs" />
+    <Compile Include="Data\DataProvider.cs" />
+    <Compile Include="Excel\ExcelExport.cs" />
+    <Compile Include="Excel\ExcelDataReader.cs" />
+    <Compile Include="CSV\CsvExport.cs" />
+    <Compile Include="Excel\ExcelManager.cs" />
+    <Compile Include="Excel\ExcelManagerServices.cs" />
+    <Compile Include="Exceptions\ProcessamentoException.cs" />
+    <Compile Include="Exceptions\BaseException.cs" />
+    <Compile Include="Exceptions\SiteException.cs" />
+    <Compile Include="Exceptions\MarketPlaceException.cs" />
+    <Compile Include="Exceptions\WebPremiosException.cs" />
+    <Compile Include="ExtensionMethods\DataReaderExtensions.cs" />
+    <Compile Include="ExtensionMethods\InfrastructureExtensionMethods.cs" />
+    <Compile Include="ExtensionMethods\QueryableExtensions.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FTP\Ftp.cs" />
+    <Compile Include="Helpers\Imagem.cs" />
+    <Compile Include="Helpers\JsonRequest.cs" />
+    <Compile Include="Helpers\StopWatchHelper.cs" />
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Helpers\UploadFile.cs" />
+    <Compile Include="Helpers\UploadFileResult.cs" />
+    <Compile Include="Helpers\Url.cs" />
+    <Compile Include="Helpers\Vimeo.cs" />
+    <Compile Include="Log4net\LogHelper.cs" />
+    <Compile Include="Mail\Email.cs" />
+    <Compile Include="Mail\EmailSendGrid.cs" />
+    <Compile Include="Mail\EmailExactTarget.cs" />
+    <Compile Include="Models\Property.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ExactTarget\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SFTP\Sftp.cs" />
+    <Compile Include="Sms\Sms.cs" />
+    <Compile Include="Storage\Azure\Blob\Storage.cs" />
+    <Compile Include="Storage\IStorage.cs" />
+    <Compile Include="TXT\TxtUtil.cs" />
+    <Compile Include="Web References\br.com.webpremios.gte\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Comunika\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_lib\HumanAPIClient.dll" />
+    <Content Include="_Scripts\0 - Create Database.sql" />
+    <Content Include="_Scripts\1- Insert LogTipo.sql" />
+    <Content Include="_Scripts\2- Insert Catalogo.sql" />
+    <Content Include="_Scripts\3- Insert WebSmart.sql" />
+    <Content Include="_Scripts\4- Insert Estado.sql" />
+    <Content Include="_Scripts\5 - ScriptMenus.sql" />
+    <Content Include="_Scripts\6 - Procedures.sql" />
+    <Content Include="_Scripts\95166\01 - EstruturaClubeDasEstrelas.sql" />
+    <Content Include="_Scripts\95166\02 - ClubeEstrelasImportacao.sql" />
+    <Content Include="_Scripts\95166\03 - ClubeEstrelasExtrato.sql" />
+    <Content Include="_Scripts\95166\04 - MultiplosCatalogos.sql" />
+    <Content Include="_Scripts\95337\01.Cluster.sql" />
+    <Content Include="_Scripts\95337\02.JP_PRC_AtualizaClusterRA.sql" />
+    <Content Include="_Scripts\95337\03.Menu.sql" />
+    <Content Include="_Scripts\97081\01.Catalogo.sql" />
+    <Content Include="_Scripts\97081\02.JP_PRC_SummaryExtrato.sql" />
+    <Content Include="_Scripts\97081\03.JP_PRC_ExtratoPorTipoClubeEstrelas.sql" />
+    <Content Include="_Scripts\97081\ClubeEstrelasProgramDescription.sql" />
+    <Content Include="_Scripts\Alianca\AliancaDetail.sql" />
+    <Content Include="_Scripts\Alianca\AliancaHeader.sql" />
+    <Content Include="_Scripts\Alianca\Aliancalmportacao.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaArquivoCsv.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaAtualizaTotaisProcessamento.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaExtrato.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaImportacaoErro.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancalmportacaoHistory.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaNormalizarDetail.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaNormalizarHeader.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaParticipantePreCadastro.sql" />
+    <Content Include="_Scripts\Alianca\JP_PRC_AliancaValidarLote.sql" />
+    <Content Include="_Scripts\Alianca\script.sql" />
+    <Content Include="_Scripts\Banners\script.sql" />
+    <Content Include="_Scripts\Apoio\JP_PRC_ApoioValidarPontuacao.sql" />
+    <Content Include="_Scripts\Consecutividade\DROP\JP_PRC_ConsecutividadeHeaderProcessoPendentes.sql" />
+    <Content Include="_Scripts\Consecutividade\DROP\JP_PRC_NormalizaConsecutividadeImportacao.sql" />
+    <Content Include="_Scripts\Consecutividade\DROP\JP_PRC_NormalizaConsecutividadeImportacaoDetailFromBulk.sql" />
+    <Content Include="_Scripts\Consecutividade\DROP\JP_PRC_NormalizaConsecutividadeImportacaoErroFromBulk.sql" />
+    <Content Include="_Scripts\Consecutividade\DROP\JP_PRC_NormalizaConsecutividadeImportacaoHeaderFromBulk.sql" />
+    <Content Include="_Scripts\Consecutividade\JP_PRC_NormalizaConsecutividadeImportacaoDetail.sql" />
+    <Content Include="_Scripts\Consecutividade\JP_PRC_NormalizaConsecutividadeImportacaoErro.sql" />
+    <Content Include="_Scripts\Consecutividade\JP_PRC_NormalizaConsecutividadeImportacaoHeader.sql" />
+    <Content Include="_Scripts\Consecutividade\JP_PRC_ProcessaConsecutividadeLogDetalhado.sql" />
+    <Content Include="_Scripts\Create Database WebSmart Fase 2.sql" />
+    <Content Include="_Scripts\Create Database WebSmart.sql" />
+    <Content Include="_Scripts\CreateEstruturaPontuacao.sql" />
+    <Content Include="_Scripts\CriacaoModeloColunasHierarquia.sql" />
+    <Content Include="_Scripts\Estorno\Estorno.sql" />
+    <Content Include="_Scripts\Estorno\EstornoImportacao.sql" />
+    <Content Include="_Scripts\Estorno\EstornoImportacaoErro.sql" />
+    <Content Include="_Scripts\Estorno\EstornoLote.sql" />
+    <Content Include="_Scripts\Estorno\EstornoPedido.sql" />
+    <Content Include="_Scripts\Estorno\EstornoPedidoLive.sql" />
+    <Content Include="_Scripts\Estorno\EstornoRequisicao.sql" />
+    <Content Include="_Scripts\Estorno\EstornoSms.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_EstornoLimparImportacao.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_EstornoNormalizacaoPedidos.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_EstornoNormalizarErroLive.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_EstornoTotalizar.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_EstornoValidarImportacao.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_ObterEstornoPedidosCSV.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_ObterEstornoPedidosErro.sql" />
+    <Content Include="_Scripts\Estorno\JP_PRC_ObterEstornoPedidosSms.sql" />
+    <Content Include="_Scripts\Estorno\Live\JP_PRC_EstornoLimparImportacaoLive.sql" />
+    <Content Include="_Scripts\Estorno\Live\JP_PRC_EstornoValidarPedidosLive.sql" />
+    <Content Include="_Scripts\Estorno\Live\TB_EstornoImportacaoAVON.sql" />
+    <Content Include="_Scripts\Estorno\Menu.sql" />
+    <Content Include="_Scripts\Estorno\Script.sql" />
+    <Content Include="_Scripts\Banners\Banner.sql" />
+    <Content Include="_Scripts\Banners\BannerPreview.sql" />
+    <Content Include="_Scripts\InsertParticipanteTeste.sql" />
+    <Content Include="_Scripts\JP_PRC_ObterArquivoCSV - Pontos Pendentes.sql" />
+    <Content Include="_Scripts\JP_PRC_ProcessarRetornoPontos.sql" />
+    <Content Include="_Scripts\LayoutClubeDasEstrelas_1.4\Layout_1_4_ClubedasEstrelas_Procedures.sql" />
+    <Content Include="_Scripts\LayoutClubeDasEstrelas_1.4\Layout_1_4_ClubedasEstrelas_Tabelas.sql" />
+    <Content Include="_Scripts\LogProcessamento.sql" />
+    <Content Include="_Scripts\Metas - Sprint1\1 - create table metas.sql" />
+    <Content Include="_Scripts\Metas - Sprint1\2 - create proc obter metas.sql" />
+    <Content Include="_Scripts\Metas - Sprint1\3 - insercao de dados.sql" />
+    <Content Include="_Scripts\Migracao\JP_Imp_InserePontuacaoMigracao.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_ExtratoMigracaoPorRA.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_ExtratoPorTipoMigracao.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_LitarPontuacoes.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoAtualizaTotaisProcessamento.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoImportacaoErroFromBulk.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoImportacaoHistory.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoImportacaoNormalizeHeaderFromBulk.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoImportacaoNormalizeRegister1FromBulk.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoImportacaoNormalizeRegister2FromBulk.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoImportacaoParticipantePreCadastro.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoRegister1ProcessoPendentes.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoRegister2ProcessoPendentes.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_MigracaoValidarPontuacao.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_ObterArquivoCSV.sql" />
+    <Content Include="_Scripts\Migracao\JP_PRC_SummaryExtrato.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoHeader.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoImportacao.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoImportacaoHistory.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoRegister1.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoRegister1Extrato.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoRegister2.sql" />
+    <Content Include="_Scripts\Migracao\MigracaoRegister2Extrato.sql" />
+    <Content Include="_Scripts\Migracao\Scripts.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalArquivoCsv.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalAtualizaTotaisProcessamento.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalImportacaoErro.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatallmportacaoHistory.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalNormalizarDetail.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalNormalizarHeader.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalParticipantePreCadastro.sql" />
+    <Content Include="_Scripts\Natal\JP_PRC_NatalValidarLote.sql" />
+    <Content Include="_Scripts\Natal\NatalDetail.sql" />
+    <Content Include="_Scripts\Natal\NatalHeader.sql" />
+    <Content Include="_Scripts\Natal\Natallmportacao.sql" />
+    <Content Include="_Scripts\Natal\script.sql" />
+    <Content Include="_Scripts\ResetCampanhaApuracao.sql" />
+    <Content Include="_Scripts\ResetCampanha.sql" />
+    <Content Include="_Scripts\SMS\0 - add tipo arquivo.sql" />
+    <Content Include="_Scripts\SMS\1 - create SMSAgendamento.sql" />
+    <Content Include="_Scripts\SMS\2 - create SMSExecucao.sql" />
+    <Content Include="_Scripts\SMS\3 - create SMSAgendamentoRA.sql" />
+    <Content Include="_Scripts\SMS\4 - add menu.sql" />
+    <Content Include="_Scripts\SMS\5 - create proc obter mensagens.sql" />
+    <Content Include="_Scripts\SMS\6 - add smsApp - mongodb.txt" />
+    <Content Include="_Scripts\SMS\7 - create ApoioParticipante.sql" />
+    <Content Include="_Scripts\SMS\JP_Sel_Balance_AVON.sql" />
+    <Content Include="_Scripts\Sprint - Unificação de Plataformas\JP_PRC_ObterArquivosMonitoramento.sql" />
+    <Content Include="_Scripts\Sprint - Unificação de Plataformas\JP_PRC_ObterConsolidadoPontuacaoDashboard.sql" />
+    <Content Include="_Scripts\Sprint3\10-StatusPontuacaoAlteracaoRegistros.sql" />
+    <Content Include="_Scripts\Sprint3\11 - JP_PRC_IndicacaoImportacao_PreCadastro.sql" />
+    <Content Include="_Scripts\Sprint3\12 - JP_PRC_NormalizaIndicacaoImportacao.sql" />
+    <Content Include="_Scripts\Sprint3\13-InsertRegistrosTipoOrigem.sql" />
+    <Content Include="_Scripts\Sprint3\14 - JP_PRC_ConsecutividadeImportacao_PreCadastro.sql" />
+    <Content Include="_Scripts\Sprint3\14-InsertRegistrosTipoPontuacao.sql" />
+    <Content Include="_Scripts\Sprint3\15 - JP_PRC_NormalizaConsecutividadeImportacao.sql" />
+    <Content Include="_Scripts\Sprint3\16 - JP_PRC_ApoioImportacao_PreCadastro.sql" />
+    <Content Include="_Scripts\Sprint3\17 - JP_PRC_NormalizaApoioImportacao.sql" />
+    <Content Include="_Scripts\Sprint3\17-_dbo_._JP_Imp_InserePontuacaoIndicacao_.sql" />
+    <Content Include="_Scripts\Sprint3\18-_dbo_._JP_Imp_InserePontuacaoConsecutividade_.sql" />
+    <Content Include="_Scripts\Sprint3\19-_dbo_._JP_Imp_InserePontuacaoApoio_.sql" />
+    <Content Include="_Scripts\Sprint3\24-AlteracaoNormalizacao.sql" />
+    <Content Include="_Scripts\Sprint3\26-JP_PRC_NormalizaIndicacaoImportacaoHeaderFromBulk.sql" />
+    <Content Include="_Scripts\Sprint3\27-JP_PRC_NormalizaIndicacaoImportacaoDetailFromBulk.sql" />
+    <Content Include="_Scripts\Sprint3\28-JP_PRC_NormalizaIndicacaoImportacaoErroFromBulk.sql" />
+    <Content Include="_Scripts\Sprint3\31-JP_PRC_IndicacaoHeaderProcessoPendentes.sql" />
+    <Content Include="_Scripts\Sprint3\32-JP_PRC_IndicacaoDetailProcessoPendentes.sql" />
+    <Content Include="_Scripts\Sprint3\33-JP_PRC_IndicacaoHeaderProcessoPontuados.sql" />
+    <Content Include="_Scripts\Sprint3\34-JP_PRC_IndicacaoDetailProcessoPontuados.sql" />
+    <Content Include="_Scripts\Sprint3\35-JP_PRC_IndicacaoProcessoPontuadosAtualiza.sql" />
+    <Content Include="_Scripts\Sprint3\36-JP_PRC_IndicacaoHeaderExtrato.sql" />
+    <Content Include="_Scripts\Sprint3\37-JP_PRC_IndicacaoDetailExtrato.sql" />
+    <Content Include="_Scripts\Sprint3\38-JP_PRC_IndicacaoHeaderLoteProcessoErro.sql" />
+    <Content Include="_Scripts\Sprint3\39-InsertRegistrosTipoPontuacao.sql" />
+    <Content Include="_Scripts\Sprint3\JP_PRC_IndicacaoHeaderLote.sql" />
+    <Content Include="_Scripts\Sprint3\old\__20-TabelaImportacaoErro.sql" />
+    <Content Include="_Scripts\Sprint3\old\__21-TabelaLote.sql" />
+    <Content Include="_Scripts\Sprint3\old\__22-CamposDeLoteNasTabelasNormalizadas.sql" />
+    <Content Include="_Scripts\Sprint3\old\__23-CamposDeLoteNasTabelasDeImportacao.sql" />
+    <Content Include="_Scripts\Sprint3\old\__25-TipoPontuacao.sql" />
+    <Content Include="_Scripts\Sprint3\old\__29-TabelaDeExtratoIndicacao.sql" />
+    <Content Include="_Scripts\Sprint3\old\__30-TabelasDeExtratoIndicacaoNormalizadas.sql" />
+    <Content Include="_Scripts\Sprint3\old\__7-Create Table Arquivos Bulk.sql" />
+    <Content Include="_Scripts\Sprint3\old\__8-CriacaoTabelasArquivo.sql" />
+    <Content Include="_Scripts\Sprint3\old\__9-AlteracaoTiposTabelasConsecutividade.sql" />
+    <Content Include="_Scripts\Sprint3\_IMPORTANTE_ScriptMudancaEstrutura.sql" />
+    <Content Include="_Scripts\Sprint5\1 - JP_PRC_LitarPontuacoes.sql" />
+    <Content Include="_Scripts\Sprint5\Inserts.sql" />
+    <Content Include="_Scripts\Sprint5\JP_PRC_AtualizaPontuacaoBulk.sql" />
+    <Content Include="_Scripts\Sprint5\JP_PRC_AtualizaPontuacaoStatusLive.sql" />
+    <Content Include="_Scripts\Sprint5\JP_PRC_AtualizaRetornoPontuacaoEnviada.sql" />
+    <Content Include="_Scripts\Sprint5\JP_PRC_AtualizaRetornoPontuacaoEnviadaErroPorArquivo.sql" />
+    <Content Include="_Scripts\Sprint5\JP_PRC_AtualizarStatusPontuacao.sql" />
+    <Content Include="_Scripts\Sprint6\Inserts.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_ApoioDetailProcessoPendentes.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_AtualizaTotaisProcessamentoArquivoApoio.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_AtualizaTotaisProcessamentoArquivoConsecutividade.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_AtualizaTotaisProcessamentoArquivoIndicacao.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_ConsecutividadeDetailProcessoPendentes.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_ConsecutividadeHeaderProcessoPendentes.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_DetailExtrato.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_HeaderExtrato.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_ObterArquivosMonitoramento.sql" />
+    <Content Include="_Scripts\Sprint6\JP_PRC_ObterConsolidadoPontuacaoDashboard.sql" />
+    <Content Include="_Scripts\Sprint6\[JP_Imp_InserePontuacaoIndicacao].sql" />
+    <Content Include="_Scripts\Sprint6_Ajuste\Index.sql" />
+    <Content Include="_Scripts\Sprint7\AlterTableApoio.sql" />
+    <Content Include="_Scripts\Sprint7\CriacaoTabelas.sql" />
+    <Content Include="_Scripts\Sprint7\Inserts.sql" />
+    <Content Include="_Scripts\Sprint7\JP_Imp_InserePontuacaoApoio.sql" />
+    <Content Include="_Scripts\Sprint7\JP_Imp_InserePontuacaoConsecutividade.sql" />
+    <Content Include="_Scripts\Sprint7\JP_Imp_InserePontuacaoIndicacao.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_AtualizaPontuacaoBulk.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_LitarPontuacoes.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_NormalizaApoioImportacaoDetailFromBulk.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_NormalizaApoioImportacaoErroFromBulk.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_NormalizaConsecutividadeImportacaoDetailFromBulk.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_NormalizaConsecutividadeImportacaoErroFromBulk1.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_NormalizaConsecutividadeImportacaoHeaderFromBulk.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_NormalizaIndicacaoImportacaoErroFromBulk.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_ObterArquivoCSV.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_ObterArquivosMonitoramento.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_ProcessaApoioLogDetalhado.sql" />
+    <Content Include="_Scripts\Sprint7\JP_PRC_ProcessaConsecutividadeLogDetalhado.sql" />
+    <Content Include="_Scripts\Sprint7\PRD_DB_AZU_MeuMundoAvon_Update4.publish.sql" />
+    <Content Include="_Scripts\Sprint7\ScriptMenu.sql" />
+    <Content Include="_Scripts\Sprint7\ScriptRegistros.sql" />
+    <Content Include="_Scripts\Sprint7\Sprint 7 Avon.sql" />
+    <Content Include="_Scripts\SprintSwagger\JP_PRC_AtualizaTotaisProcessamentoArquivoIndicacao.sql" />
+    <Content Include="_Scripts\Sprint_AjusteToken\Token.sql" />
+    <Content Include="_Scripts\UploadMetaGrupoItem.sql" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ExactTarget\configuration91.svcinfo" />
+    <None Include="Service References\ExactTarget\configuration.svcinfo" />
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.APIObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.ConfigureResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.CreateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.DeleteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.ExtractResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.ObjectDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.PerformResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.ScheduleResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.SystemStatusResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.UpdateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\GrupoLTM.WebSmart.Infrastructure.ExactTarget.VersionInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExactTarget\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="_lib\CasaNovaCom.WebCampanhas.Infra.dll" />
+    <Content Include="_lib\ExcelLibrary.dll" />
+    <None Include="Web References\br.com.webpremios.gte\Categoria.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.webpremios.gte\CestaFreteResultado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.webpremios.gte\Cidade.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.webpremios.gte\Endereco.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.webpremios.gte\gte.wsdl" />
+    <None Include="Web References\br.com.webpremios.gte\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.webpremios.gte\Uf.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Comunika\CreditResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Comunika\MessageReceiveResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Comunika\MessageStatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Comunika\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Comunika\SendResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Comunika\VolaSDK.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\ExactTarget\etframework.wsdl" />
+    <None Include="Service References\ExactTarget\ETFrameworkFault.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ExactTarget\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrupoLTM.WebSmart.DTO\GrupoLTM.WebSmart.DTO.csproj">
+      <Project>{8d6ffb82-4398-4dd8-a307-208c9f60e7ad}</Project>
+      <Name>GrupoLTM.WebSmart.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://gte.webpremios.com.br/servicos/gte.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.webpremios.gte\</RelPath>
+      <UpdateFromURL>http://gte.webpremios.com.br/servicos/gte.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GrupoLTM_WebSmart_Infrastructure_br_com_webpremios_gte_Servicos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://webservice.cgi2sms.com.br/axis/services/VolaSDK%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Comunika\</RelPath>
+      <UpdateFromURL>http://webservice.cgi2sms.com.br/axis/services/VolaSDK%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GrupoLTM_WebSmart_Infrastructure_Comunika_VolaSDKService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gte\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\PostSharp.6.9.6\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PostSharp.6.9.6\build\PostSharp.props'))" />
+    <Error Condition="!Exists('..\packages\PostSharp.6.9.6\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PostSharp.6.9.6\build\PostSharp.targets'))" />
+  </Target>
+  <Import Project="..\packages\PostSharp.6.9.6\build\PostSharp.targets" Condition="Exists('..\packages\PostSharp.6.9.6\build\PostSharp.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

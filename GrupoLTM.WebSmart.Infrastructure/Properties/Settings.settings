@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GrupoLTM.WebSmart.Infrastructure.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GrupoLTM_WebSmart_Infrastructure_Comunika_VolaSDKService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://webservice.cgi2sms.com.br/axis/services/VolaSDK</Value>
+    </Setting>
+    <Setting Name="GrupoLTM_WebSmart_Infrastructure_br_com_webpremios_gte_Servicos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://gte.webpremios.com.br/servicos/gte.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
