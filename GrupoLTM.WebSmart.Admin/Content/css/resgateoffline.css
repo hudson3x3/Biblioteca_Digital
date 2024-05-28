@@ -1,0 +1,26 @@
+﻿#tbArquivos tr > th, #tbArquivos tr > td {
+    text-align: center;
+}
+
+#tbArquivos td:nth-child(6) {
+    font-weight: bold;
+}
+
+.tb-tooltip-status {
+    background: none !important;
+    float: right;
+}
+
+    .tb-tooltip-status tr {
+    background: none !important;
+    }
+    .tb-tooltip-status tr td {
+        padding: 3px !important;
+        border-left: none;
+        border-right: none;
+    }
+
+    .tb-tooltip-status tr:nth-child(even) td,
+    .tb-tooltip-status tr:nth-child(odd) td {
+        background: none !important;
+    }

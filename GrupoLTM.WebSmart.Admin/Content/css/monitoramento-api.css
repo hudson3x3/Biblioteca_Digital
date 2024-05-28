@@ -1,0 +1,57 @@
+
+#btn-buscar {
+    margin-top: 10px;
+}
+
+#registro-padrao {
+    margin-left: 5px;
+}
+
+.loader {
+    font-size: 16px;
+    margin-left: 5px;
+    display: none;
+}
+
+.visualizar {
+    display: none;
+}
+
+#base-id {
+    display: none;
+}
+
+#modalJson {
+    width: 700px;
+}
+
+.modal-body {
+    overflow: hidden;
+}
+
+#json {
+    overflow: auto;
+    max-height: 53vh;
+}
+
+.status > i {
+    font-size: 16px;
+    margin-right: 5px;
+    background: white;
+}
+
+.icon-ok {
+    color: #059905;
+}
+
+.icon-warn {
+    color: #f1f101;
+}
+
+.icon-error {
+    color: red;
+}
+
+tbody > tr > .tempoResposta {
+    text-align: center;
+}

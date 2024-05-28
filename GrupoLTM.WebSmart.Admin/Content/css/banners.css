@@ -1,0 +1,397 @@
+﻿.row {
+    margin: 0;
+    padding: 0;
+}
+
+.coluna {
+    float: left;
+    width: 30%;
+}
+
+.btn-out {
+    margin-right: 10px;
+}
+
+legend {
+    margin-bottom: 10px;
+}
+
+.title-banner>h3 {
+    display: contents;
+}
+
+.title-banner>button {
+    float: right;
+}
+
+input {
+    width: 80%;
+}
+
+.space {
+    margin-bottom: 30px;
+}
+
+.space-10 {
+    margin-bottom: 10px;
+}
+
+img {
+    cursor: pointer;
+}
+
+.container {
+    width: 1180px;
+}
+
+.mosaico1-quadro1 {
+    width: 760px;
+    margin-right: 10px;
+}
+
+.vendor-mosaico1 {
+    width: 50%;
+    margin-top: 15px;
+}
+
+.banner1>img {
+    width: 760px;
+    height: 310px;
+}
+
+.mosaico1-quadro2 {
+    width: 405px;
+}
+
+.banner2 {
+    margin-bottom: 10px;
+}
+
+.banner2>img {
+    width: 405px;
+    height: 150px;
+}
+
+.banner3>img {
+    width: 405px;
+    height: 148px;
+}
+
+.mosaico2-quadro1 {
+    width: 440px;
+    margin-right: 10px;
+}
+
+.banner4>img {
+    width: 440px;
+    height: 470px;
+}
+
+.mosaico2-quadro2 {
+    width: 440px;
+}
+
+.banner5 {
+    margin-bottom: 8px;
+}
+
+.banner5>img {
+    width: 440px;
+    height: 220px;
+}
+
+.mosaico2-quadro3 {
+    width: 440px;
+}
+
+.banner6 {
+    width: 215px;
+    margin-right: 10px;
+}
+
+.banner6>img {
+    width: 215px;
+    height: 220px;
+}
+
+.urlDominio.banner6 {
+    margin-right: 0;
+}
+
+.banner7 {
+    width: 215px;
+}
+
+.banner7>img {
+    width: 215px;
+    height: 220px;
+}
+
+.vendor-mosaico2 {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.mosaico3-quadro1 {
+    width: 1175px;
+}
+
+.vendor-mosaico3 {
+    width: 50%;
+}
+
+.banner8 {
+    width: 890px;
+    margin-top: 10px;
+}
+
+.banner8>img {
+    width: 890px;
+    height: 312px;
+}
+
+.banner9 {
+    height: 525px;
+}
+
+.banner9>img {
+    position: absolute;
+    width: 1175px;
+    height: 480px;
+}
+
+.card>div {
+    position: relative;
+    width: 142px;
+}
+
+.card>div>.banner-text {
+    font-size: 10px;
+    background-color: #f1f5f761;
+}
+
+.card>div>img {
+    width: 142px;
+    height: 120px;
+}
+
+.card1 {
+    left: 662px;
+    top: 150px;
+}
+
+.card2 {
+    left: 815px;
+    top: 7px;
+}
+
+.card3 {
+    left: 508px;
+    top: 18px;
+}
+
+.card4 {
+    left: 662px;
+    top: -125px;
+}
+
+.card5 {
+    left: 815px;
+    top: -267px;
+}
+
+.banner-text {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #aaa;
+    height: 22px;
+}
+
+.banner-text.top {
+    border-bottom: none;
+    margin-bottom: -2px;
+}
+
+.banner-text.bottom {
+    border-top: none;
+    margin-top: 1px;
+}
+
+.banner-text.card {
+    border: none;
+}
+
+.url {
+    padding-left: 5px;
+    margin-top: -5px;
+    font-weight: 600;
+    font-size: 13px;
+    height: 20px;
+}
+
+.url>span {
+    color: #00599b;
+    font-style: italic;
+}
+
+.vendor {
+    margin-left: -4px;
+    color: black !important;
+}
+
+.icon {
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 8px;
+}
+
+.input-img {
+    display: none;
+}
+
+.btn-redirecionar {
+    position: absolute;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.ddl-dominio {
+    width: 110px;
+}
+
+.control-group {
+    margin-bottom: 0;
+}
+
+.control-group>label {
+    font-weight: 600;
+}
+
+.control-group>input {
+    width: calc(100% - 275px);
+    padding-right: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.control-group.error input {
+    color: inherit;
+}
+
+.control-group.error .error {
+    display: block;
+}
+
+.control-group.error-youtube .error-youtube {
+    display: block;
+}
+
+.control-group.error select {
+    border: 1px solid #cccccc;
+    color: #555555;
+}
+
+.error-text {
+    display: none;
+    color: #b90e0b;
+    font-size: 12px;
+    margin: -10px 2px 5px;
+    padding-left: 115px;
+}
+
+.ui-widget-header {
+    height: 38px;
+    border: none;
+    border-radius: 3px 3px 0 0;
+    background: #df255c;
+}
+
+.ui-widget-content {
+    border: none;
+    background: none;
+}
+
+.ui-tabs .ui-tabs-panel {
+    margin: 0 -2px;
+    padding: 8px 0px;
+    border-radius: 0px;
+    border-top: 1px solid #aaa;
+}
+
+.ui-state-active {
+    height: 37px;
+    margin: -2px 0px;
+    font-size: 1.06em;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 0 !important;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner3>.msg-alterar {
+    top: 40%;
+}
+
+.banner9>.msg-alterar {
+    top: 20%;
+}
+
+.banner9>.icon {
+    right: 10px;
+}
+
+.opacidade-alterar-img {
+    opacity: 0.3;
+}
+
+.msg-alterar {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    color: black;
+    font-weight: 600;
+    opacity: 1;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.msg-alterar.font-large {
+    font-size: 22px;
+}
+
+.msg-alterar.font-small {
+    font-size: 12px;
+}
+
+.icon-img-change {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.card>div {
+    position: relative;
+}
+
+.card>div>.icon-img-change {
+    color: black;
+    font-size: 15px;
+    margin-left: -20px;
+}
+
+.card>div>.msg-alterar {
+    text-align: center;
+    font-size: 12px;
+}
+
+.card.sm-mosaico-3 {
+    height: 95%;
+}

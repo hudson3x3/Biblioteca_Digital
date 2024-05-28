@@ -1,0 +1,54 @@
+
+
+.paging_full_numbers {
+	width: auto;
+	height: 22px;
+	line-height: 22px;
+}
+
+.paging_full_numbers a:active {
+	outline: none
+}
+
+.paging_full_numbers a:hover {
+	text-decoration: none;
+}
+
+.paging_full_numbers a.paginate_button,
+ 	.paging_full_numbers a.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+	color: #333 !important;
+}
+
+.paging_full_numbers a.paginate_button {
+	background-color: #F5F4F4;
+    border:solid 1px #C5C5C5;
+    text-decoration: none;
+}
+
+.paging_full_numbers a.paginate_button:hover {
+	background-color: #ccc;
+	text-decoration: none !important;
+}
+
+.paging_full_numbers a.paginate_active {
+	background-color: #C5C5C5;
+    text-decoration: none;
+}
+
+table.display tr.even.row_selected td {
+	background-color: #C5C5C5;
+    text-decoration: none;
+}
+
+table.display tr.odd.row_selected td {
+	background-color: #C5C5C5;
+    text-decoration: none;
+}
+

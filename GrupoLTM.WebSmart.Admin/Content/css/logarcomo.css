@@ -1,0 +1,19 @@
+
+.avonAccountName {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pontuacao .form-group {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.pontuacao label {
+    font-weight: 500;
+}
+
+.pontuacao input {
+    display: block;
+}
