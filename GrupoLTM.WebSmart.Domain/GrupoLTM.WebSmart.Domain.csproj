@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16F287F9-8C74-468F-ADB3-3E1FC9CAA048}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoLTM.WebSmart.Domain</RootNamespace>
+    <AssemblyName>GrupoLTM.WebSmart.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|AnyCPU'">
+    <OutputPath>bin\Hml\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|AnyCPU'">
+    <OutputPath>bin\Prd\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_DEV_Site|AnyCPU'">
+    <OutputPath>bin\MeuMundoAvon_DEV_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_HML_Site|AnyCPU'">
+    <OutputPath>bin\MeuMundoAvon_HML_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.MeuMundoAvon_PRD|AnyCPU'">
+    <OutputPath>bin\Web.MeuMundoAvon_PRD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|x86'">
+    <OutputPath>bin\x86\Hml\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|x86'">
+    <OutputPath>bin\x86\Dev\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|x86'">
+    <OutputPath>bin\x86\Prd\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_DEV_Site|x86'">
+    <OutputPath>bin\x86\MeuMundoAvon_DEV_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MeuMundoAvon_HML_Site|x86'">
+    <OutputPath>bin\x86\MeuMundoAvon_HML_Site\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Web.MeuMundoAvon_PRD|x86'">
+    <OutputPath>bin\x86\Web.MeuMundoAvon_PRD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.0.0.11\lib\net40\FastMember.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.56.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Text.4.0.56\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\ExtratoPunch.cs" />
+    <Compile Include="DTO\LogAccountDTO.cs" />
+    <Compile Include="DTO\ParticipantDTO.cs" />
+    <Compile Include="Enums\Enum.cs" />
+    <Compile Include="Migrations\201607191709302_Initial.cs" />
+    <Compile Include="Migrations\201607191709302_Initial.Designer.cs">
+      <DependentUpon>201607191709302_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607221311088_SkipFirstAccess.cs" />
+    <Compile Include="Migrations\201607221311088_SkipFirstAccess.Designer.cs">
+      <DependentUpon>201607221311088_SkipFirstAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607221643562_LogPageView.cs" />
+    <Compile Include="Migrations\201607221643562_LogPageView.Designer.cs">
+      <DependentUpon>201607221643562_LogPageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607221757296_CatalogoAtivo.cs" />
+    <Compile Include="Migrations\201607221757296_CatalogoAtivo.Designer.cs">
+      <DependentUpon>201607221757296_CatalogoAtivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607261410241_PeriodoCatalogo.cs" />
+    <Compile Include="Migrations\201607261410241_PeriodoCatalogo.Designer.cs">
+      <DependentUpon>201607261410241_PeriodoCatalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608031526222_Tabelas_Bulk.cs" />
+    <Compile Include="Migrations\201608031526222_Tabelas_Bulk.Designer.cs">
+      <DependentUpon>201608031526222_Tabelas_Bulk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608052053540_TabelasFinaisArquivo.cs" />
+    <Compile Include="Migrations\201608052053540_TabelasFinaisArquivo.Designer.cs">
+      <DependentUpon>201608052053540_TabelasFinaisArquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608081917557_AjusteNormalizacaoIndicacao.cs" />
+    <Compile Include="Migrations\201608081917557_AjusteNormalizacaoIndicacao.Designer.cs">
+      <DependentUpon>201608081917557_AjusteNormalizacaoIndicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608092027214_AlteracaoTiposCamposConsecutividade.cs" />
+    <Compile Include="Migrations\201608092027214_AlteracaoTiposCamposConsecutividade.Designer.cs">
+      <DependentUpon>201608092027214_AlteracaoTiposCamposConsecutividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608101341166_InclusaoTabelaConsecutividadeHeader.cs" />
+    <Compile Include="Migrations\201608101341166_InclusaoTabelaConsecutividadeHeader.Designer.cs">
+      <DependentUpon>201608101341166_InclusaoTabelaConsecutividadeHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608101740449_TabelasRastreamentoDaPontuacao.cs" />
+    <Compile Include="Migrations\201608101740449_TabelasRastreamentoDaPontuacao.Designer.cs">
+      <DependentUpon>201608101740449_TabelasRastreamentoDaPontuacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608152323283_LogProcessamento.cs" />
+    <Compile Include="Migrations\201608152323283_LogProcessamento.Designer.cs">
+      <DependentUpon>201608152323283_LogProcessamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608160013479_LogProcessamento2.cs" />
+    <Compile Include="Migrations\201608160013479_LogProcessamento2.Designer.cs">
+      <DependentUpon>201608160013479_LogProcessamento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608161930473_TokenLogErro.cs" />
+    <Compile Include="Migrations\201608161930473_TokenLogErro.Designer.cs">
+      <DependentUpon>201608161930473_TokenLogErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608181030536_MergeHML.cs" />
+    <Compile Include="Migrations\201608181030536_MergeHML.Designer.cs">
+      <DependentUpon>201608181030536_MergeHML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608181907285_DataMapAvon.cs" />
+    <Compile Include="Migrations\201608181907285_DataMapAvon.Designer.cs">
+      <DependentUpon>201608181907285_DataMapAvon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608191832415_TabelaImportacaoErro.cs" />
+    <Compile Include="Migrations\201608191832415_TabelaImportacaoErro.Designer.cs">
+      <DependentUpon>201608191832415_TabelaImportacaoErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608192042240_TabelaLote.cs" />
+    <Compile Include="Migrations\201608192042240_TabelaLote.Designer.cs">
+      <DependentUpon>201608192042240_TabelaLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608221846278_CamposLoteTabelasNormalizadas.cs" />
+    <Compile Include="Migrations\201608221846278_CamposLoteTabelasNormalizadas.Designer.cs">
+      <DependentUpon>201608221846278_CamposLoteTabelasNormalizadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608222043239_CampoLoteTabelasImportacao.cs" />
+    <Compile Include="Migrations\201608222043239_CampoLoteTabelasImportacao.Designer.cs">
+      <DependentUpon>201608222043239_CampoLoteTabelasImportacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251948295_Alteracao Normalizacao.cs" />
+    <Compile Include="Migrations\201608251948295_Alteracao Normalizacao.Designer.cs">
+      <DependentUpon>201608251948295_Alteracao Normalizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608261820021_TamanhoRepresentativeNumber.cs" />
+    <Compile Include="Migrations\201608261820021_TamanhoRepresentativeNumber.Designer.cs">
+      <DependentUpon>201608261820021_TamanhoRepresentativeNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608291714149_PontuacaoOrigem.cs" />
+    <Compile Include="Migrations\201608291714149_PontuacaoOrigem.Designer.cs">
+      <DependentUpon>201608291714149_PontuacaoOrigem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608311750161_AjustesBulk_Indice.cs" />
+    <Compile Include="Migrations\201608311750161_AjustesBulk_Indice.Designer.cs">
+      <DependentUpon>201608311750161_AjustesBulk_Indice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609052020545_TabelaExtratoIndicacao.cs" />
+    <Compile Include="Migrations\201609052020545_TabelaExtratoIndicacao.Designer.cs">
+      <DependentUpon>201609052020545_TabelaExtratoIndicacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609061943012_TabelasExtratoNormalizadas.cs" />
+    <Compile Include="Migrations\201609061943012_TabelasExtratoNormalizadas.Designer.cs">
+      <DependentUpon>201609061943012_TabelasExtratoNormalizadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609072218386_TamanhoParticipant.cs" />
+    <Compile Include="Migrations\201609072218386_TamanhoParticipant.Designer.cs">
+      <DependentUpon>201609072218386_TamanhoParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609121638290_IndicacaoDetailExtratoAtivo.cs" />
+    <Compile Include="Migrations\201609121638290_IndicacaoDetailExtratoAtivo.Designer.cs">
+      <DependentUpon>201609121638290_IndicacaoDetailExtratoAtivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609121742339_IndicacaoHeaderExtratoMktPlaceCatalogoId.cs" />
+    <Compile Include="Migrations\201609121742339_IndicacaoHeaderExtratoMktPlaceCatalogoId.Designer.cs">
+      <DependentUpon>201609121742339_IndicacaoHeaderExtratoMktPlaceCatalogoId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609151713143_TabelaIndicacaoHeaderLote.cs" />
+    <Compile Include="Migrations\201609151713143_TabelaIndicacaoHeaderLote.Designer.cs">
+      <DependentUpon>201609151713143_TabelaIndicacaoHeaderLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161300192_Catalogo Empresa.cs" />
+    <Compile Include="Migrations\201609161300192_Catalogo Empresa.Designer.cs">
+      <DependentUpon>201609161300192_Catalogo Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161734009_ArquivoConfiguracao.cs" />
+    <Compile Include="Migrations\201609161734009_ArquivoConfiguracao.Designer.cs">
+      <DependentUpon>201609161734009_ArquivoConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161757396_Alteracoes Pontuacao.cs" />
+    <Compile Include="Migrations\201609161757396_Alteracoes Pontuacao.Designer.cs">
+      <DependentUpon>201609161757396_Alteracoes Pontuacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161846353_Campos Adicioandos Arquivo.cs" />
+    <Compile Include="Migrations\201609161846353_Campos Adicioandos Arquivo.Designer.cs">
+      <DependentUpon>201609161846353_Campos Adicioandos Arquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609161914313_FezJusLote.cs" />
+    <Compile Include="Migrations\201609161914313_FezJusLote.Designer.cs">
+      <DependentUpon>201609161914313_FezJusLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201037186_ArquivoId adicionado em Pontuacao.cs" />
+    <Compile Include="Migrations\201609201037186_ArquivoId adicionado em Pontuacao.Designer.cs">
+      <DependentUpon>201609201037186_ArquivoId adicionado em Pontuacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201108380_Erro adicionado em Pontuacao.cs" />
+    <Compile Include="Migrations\201609201108380_Erro adicionado em Pontuacao.Designer.cs">
+      <DependentUpon>201609201108380_Erro adicionado em Pontuacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201610459_TratamentoErrosLote.cs" />
+    <Compile Include="Migrations\201609201610459_TratamentoErrosLote.Designer.cs">
+      <DependentUpon>201609201610459_TratamentoErrosLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201811584_TratamentoErrosLoteAjuste.cs" />
+    <Compile Include="Migrations\201609201811584_TratamentoErrosLoteAjuste.Designer.cs">
+      <DependentUpon>201609201811584_TratamentoErrosLoteAjuste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221137059_ArquivoExtratoProcessado.cs" />
+    <Compile Include="Migrations\201609221137059_ArquivoExtratoProcessado.Designer.cs">
+      <DependentUpon>201609221137059_ArquivoExtratoProcessado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221647558_Atualiza PontuacaoRecebida.cs" />
+    <Compile Include="Migrations\201609221647558_Atualiza PontuacaoRecebida.Designer.cs">
+      <DependentUpon>201609221647558_Atualiza PontuacaoRecebida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221713364_Remove PontuacaoRecebida.cs" />
+    <Compile Include="Migrations\201609221713364_Remove PontuacaoRecebida.Designer.cs">
+      <DependentUpon>201609221713364_Remove PontuacaoRecebida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221723359_Recria PontuacaoRecebida.cs" />
+    <Compile Include="Migrations\201609221723359_Recria PontuacaoRecebida.Designer.cs">
+      <DependentUpon>201609221723359_Recria PontuacaoRecebida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609261348096_Long em IdOrigem do Catalogo.cs" />
+    <Compile Include="Migrations\201609261348096_Long em IdOrigem do Catalogo.Designer.cs">
+      <DependentUpon>201609261348096_Long em IdOrigem do Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609281050307_CatalogoParticipanteMktPlace.cs" />
+    <Compile Include="Migrations\201609281050307_CatalogoParticipanteMktPlace.Designer.cs">
+      <DependentUpon>201609281050307_CatalogoParticipanteMktPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609291140338_referredNameExtrato.cs" />
+    <Compile Include="Migrations\201609291140338_referredNameExtrato.Designer.cs">
+      <DependentUpon>201609291140338_referredNameExtrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292103575_TabelasCPArquivo.cs" />
+    <Compile Include="Migrations\201609292103575_TabelasCPArquivo.Designer.cs">
+      <DependentUpon>201609292103575_TabelasCPArquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609301712031_CodigoMktPlaceTipo.cs" />
+    <Compile Include="Migrations\201609301712031_CodigoMktPlaceTipo.Designer.cs">
+      <DependentUpon>201609301712031_CodigoMktPlaceTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610031626145_LoteImportacaoErro.cs" />
+    <Compile Include="Migrations\201610031626145_LoteImportacaoErro.Designer.cs">
+      <DependentUpon>201610031626145_LoteImportacaoErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610041302313_Alteração Catalogo.cs" />
+    <Compile Include="Migrations\201610041302313_Alteração Catalogo.Designer.cs">
+      <DependentUpon>201610041302313_Alteração Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610041911012_LinhaImportacaoCompleta.cs" />
+    <Compile Include="Migrations\201610041911012_LinhaImportacaoCompleta.Designer.cs">
+      <DependentUpon>201610041911012_LinhaImportacaoCompleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610042014296_TabelaDeLogDetalhado.cs" />
+    <Compile Include="Migrations\201610042014296_TabelaDeLogDetalhado.Designer.cs">
+      <DependentUpon>201610042014296_TabelaDeLogDetalhado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610051708025_AjusteNormalizadaConsecApoio.cs" />
+    <Compile Include="Migrations\201610051708025_AjusteNormalizadaConsecApoio.Designer.cs">
+      <DependentUpon>201610051708025_AjusteNormalizadaConsecApoio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610051801036_AjusteLinhaConteudo.cs" />
+    <Compile Include="Migrations\201610051801036_AjusteLinhaConteudo.Designer.cs">
+      <DependentUpon>201610051801036_AjusteLinhaConteudo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610051825436_TabelasDeExtrato.cs" />
+    <Compile Include="Migrations\201610051825436_TabelasDeExtrato.Designer.cs">
+      <DependentUpon>201610051825436_TabelasDeExtrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610052109233_AlteracaoTabelasDeExtrato.cs" />
+    <Compile Include="Migrations\201610052109233_AlteracaoTabelasDeExtrato.Designer.cs">
+      <DependentUpon>201610052109233_AlteracaoTabelasDeExtrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610061347145_CatalogoId em ResgateAvon.cs" />
+    <Compile Include="Migrations\201610061347145_CatalogoId em ResgateAvon.Designer.cs">
+      <DependentUpon>201610061347145_CatalogoId em ResgateAvon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610111043371_LogDetalhado.cs" />
+    <Compile Include="Migrations\201610111043371_LogDetalhado.Designer.cs">
+      <DependentUpon>201610111043371_LogDetalhado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807181855046_adicionandoTabelaMetaRA.cs" />
+    <Compile Include="Migrations\201807181855046_adicionandoTabelaMetaRA.Designer.cs">
+      <DependentUpon>201807181855046_adicionandoTabelaMetaRA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807201810405_alterandoColunasMetaRA.cs" />
+    <Compile Include="Migrations\201807201810405_alterandoColunasMetaRA.Designer.cs">
+      <DependentUpon>201807201810405_alterandoColunasMetaRA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807252003065_add-column-metas.cs" />
+    <Compile Include="Migrations\201807252003065_add-column-metas.Designer.cs">
+      <DependentUpon>201807252003065_add-column-metas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807252007384_change-column-metas.cs" />
+    <Compile Include="Migrations\201807252007384_change-column-metas.Designer.cs">
+      <DependentUpon>201807252007384_change-column-metas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808152133120_add-tabelas-sms.cs" />
+    <Compile Include="Migrations\201808152133120_add-tabelas-sms.Designer.cs">
+      <DependentUpon>201808152133120_add-tabelas-sms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808171809284_alteraCamposSMS.cs" />
+    <Compile Include="Migrations\201808171809284_alteraCamposSMS.Designer.cs">
+      <DependentUpon>201808171809284_alteraCamposSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221922303_alteraColunaArquivo.cs" />
+    <Compile Include="Migrations\201808221922303_alteraColunaArquivo.Designer.cs">
+      <DependentUpon>201808221922303_alteraColunaArquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808232221001_alteraColunasSMSExecucao.cs" />
+    <Compile Include="Migrations\201808232221001_alteraColunasSMSExecucao.Designer.cs">
+      <DependentUpon>201808232221001_alteraColunasSMSExecucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808241245085_alteraExecucao.cs" />
+    <Compile Include="Migrations\201808241245085_alteraExecucao.Designer.cs">
+      <DependentUpon>201808241245085_alteraExecucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808272012297_atualizando-base.cs" />
+    <Compile Include="Migrations\201808272012297_atualizando-base.Designer.cs">
+      <DependentUpon>201808272012297_atualizando-base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808302153551_addAgendamentoSMS.cs" />
+    <Compile Include="Migrations\201808302153551_addAgendamentoSMS.Designer.cs">
+      <DependentUpon>201808302153551_addAgendamentoSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AliancaExtrato.cs" />
+    <Compile Include="Models\ApoioDetail.cs" />
+    <Compile Include="Models\ApoioExtrato.cs" />
+    <Compile Include="Models\ApoioImportacao.cs" />
+    <Compile Include="Models\ApoioParticipante.cs" />
+    <Compile Include="Models\BannerPreview.cs" />
+    <Compile Include="Models\Banner.cs" />
+    <Compile Include="Models\EstornoPedidoComunicacao.cs" />
+    <Compile Include="Models\Importacao\Estorno.cs" />
+    <Compile Include="Models\Importacao\EstornoPedidoCsv.cs" />
+    <Compile Include="Models\Importacao\EstornoSms.cs" />
+    <Compile Include="Models\Importacao\EstornoEmail.cs" />
+    <Compile Include="Models\Importacao\EstornoRequisicao.cs" />
+    <Compile Include="Models\Importacao\EstornoPedidoLive.cs" />
+    <Compile Include="Models\Importacao\EstornoPedido.cs" />
+    <Compile Include="Models\Importacao\EstornoLote.cs" />
+    <Compile Include="Models\Importacao\EstornoImportacaoErro.cs" />
+    <Compile Include="Models\Mapping\AliancaHeaderMap.cs" />
+    <Compile Include="Models\Mapping\BannerPreviewMap.cs" />
+    <Compile Include="Models\Mapping\BannerMap.cs" />
+    <Compile Include="Models\Mapping\EstornoImportacaoErroMap.cs" />
+    <Compile Include="Models\Mapping\EstornoSmsMap.cs" />
+    <Compile Include="Models\Mapping\EstornoEmailMap.cs" />
+    <Compile Include="Models\Mapping\EstornoRequisicaoMap.cs" />
+    <Compile Include="Models\Mapping\EstornoPedidoMap.cs" />
+    <Compile Include="Models\Mapping\EstornoMap.cs" />
+    <Compile Include="Models\Mapping\EstornoLoteMap.cs" />
+    <Compile Include="Models\Mapping\MigracaoHeaderMap.cs" />
+    <Compile Include="Models\Mapping\AliancaDetailMap.cs" />
+    <Compile Include="Models\Mapping\NatalHeaderMap.cs" />
+    <Compile Include="Models\Mapping\NatalDetailMap.cs" />
+    <Compile Include="Models\Mapping\MigracaoRegister2Map.cs" />
+    <Compile Include="Models\Mapping\MigracaoRegister1Map.cs" />
+    <Compile Include="Models\Mapping\MigracaoRegister1ExtratoMap.cs" />
+    <Compile Include="Models\Mapping\UsuarioAdmAluno.cs" />
+    <Compile Include="Models\MigracaoExtrato.cs" />
+    <Compile Include="Models\AliancaDetail.cs" />
+    <Compile Include="Models\AliancaHeader.cs" />
+    <Compile Include="Models\NatalHeader.cs" />
+    <Compile Include="Models\MigracaoRegister1Extrato.cs" />
+    <Compile Include="Models\ClubeEstrelasRegister2Extrato.cs" />
+    <Compile Include="Models\ClubeEstrelasRegister1Extrato.cs" />
+    <Compile Include="Models\Mapping\MigracaoRegister2ExtratoMap.cs" />
+    <Compile Include="Models\MigracaoRegister2.cs" />
+    <Compile Include="Models\MigracaoRegister1.cs" />
+    <Compile Include="Models\MigracaoHeader.cs" />
+    <Compile Include="Models\Imagem.cs" />
+    <Compile Include="Models\ArquivoConfiguracao.cs" />
+    <Compile Include="Models\ArquivoCreditoLote.cs" />
+    <Compile Include="Models\ClubeEstrelasProgramDescription.cs" />
+    <Compile Include="Models\Cluster.cs" />
+    <Compile Include="Models\ClusterProduct.cs" />
+    <Compile Include="Models\ClusterRA.cs" />
+    <Compile Include="Models\ClusterRATemp.cs" />
+    <Compile Include="Models\ConsecutividadeExtrato.cs" />
+    <Compile Include="Models\ForcarPrimeiroAcesso.cs" />
+    <Compile Include="Models\CallBackWebHook.cs" />
+    <Compile Include="Models\HomeMMAExtrato.cs" />
+    <Compile Include="Models\ListaSMSAvulso.cs" />
+    <Compile Include="Models\Live\RequestCredit.cs" />
+    <Compile Include="Models\Live\StatusTransactionTemp.cs" />
+    <Compile Include="Models\Live\TransactionItemTemp.cs" />
+    <Compile Include="Models\Live\TransactionTemp.cs" />
+    <Compile Include="Models\LogAcessoHotSite.cs" />
+    <Compile Include="Models\MadrinhaExtrato.cs" />
+    <Compile Include="Models\Mapping\ArquivoConfiguracaoMap.cs" />
+    <Compile Include="Models\Mapping\ArquivoCreditoLoteMap.cs" />
+    <Compile Include="Models\Mapping\ClubeEstrelasRegister1ExtratoMap.cs" />
+    <Compile Include="Models\Mapping\ClubeEstrelasRegister2ExtratoMap.cs" />
+    <Compile Include="Models\Mapping\ItemCallBackWebHookMap.cs" />
+    <Compile Include="Models\Mapping\SMSAgendamentoImagemMap.cs" />
+    <Compile Include="Models\Mapping\ForcarPrimeiroAcessoCatalogoMap.cs" />
+    <Compile Include="Models\Mapping\ClubeEstrelasProgramDescriptionMap.cs" />
+    <Compile Include="Models\Mapping\ClusterMap.cs" />
+    <Compile Include="Models\Mapping\ClusterProductMap.cs" />
+    <Compile Include="Models\Mapping\ClusterRAMap.cs" />
+    <Compile Include="Models\Mapping\ClusterRATempMap.cs" />
+    <Compile Include="Models\Mapping\ResgateOffLineMap.cs" />
+    <Compile Include="Models\MeuDesconto.cs" />
+    <Compile Include="Models\Mapping\Live\RequestCreditMap.cs" />
+    <Compile Include="Models\Mapping\Live\StatusTransactionTempMap.cs" />
+    <Compile Include="Models\Mapping\Live\TransactionItemTempMap.cs" />
+    <Compile Include="Models\Mapping\Live\TransactionTempMap.cs" />
+    <Compile Include="Models\AvonExternalAuthentication.cs" />
+    <Compile Include="Models\FatorConversaoPontosSimulador.cs" />
+    <Compile Include="Models\MapaLoja.cs" />
+    <Compile Include="Models\LogSimulador.cs" />
+    <Compile Include="Models\Mapping\FatorConversaoPontosSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\LogAcessoHotSiteMap.cs" />
+    <Compile Include="Models\Mapping\LogSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\ProgramaIncentivoCatalogoArquivoMap.cs" />
+    <Compile Include="Models\Mapping\ProgramaIncentivoMap.cs" />
+    <Compile Include="Models\MigracaoRegister2Extrato.cs" />
+    <Compile Include="Models\MktPlace\ResgatesCampanha.cs" />
+    <Compile Include="Models\MktPlace\ReversePontosMaisCash.cs" />
+    <Compile Include="Models\ForcarPrimeiroAcessoCatalogo.cs" />
+    <Compile Include="Models\NatalExtrato.cs" />
+    <Compile Include="Models\NatalDetail.cs" />
+    <Compile Include="Models\PontosExtrato.cs" />
+    <Compile Include="Models\PontosExpiradosExtrato.cs" />
+    <Compile Include="Models\PontosExpirarExtrato.cs" />
+    <Compile Include="Models\PontosResgatadosExtrato.cs" />
+    <Compile Include="Models\ArquivoClubeEstrelasRegister.cs" />
+    <Compile Include="Models\ResgateOffLine.cs" />
+    <Compile Include="Models\ProgramaIncentivoCatalogoArquivo.cs" />
+    <Compile Include="Models\ProgramaIncentivo.cs" />
+    <Compile Include="Models\CampanhaMecanicaSimulador.cs" />
+    <Compile Include="Models\CampanhaSimulador.cs" />
+    <Compile Include="Models\CatalogoCP.cs" />
+    <Compile Include="Models\ConsecutividadeDetail.cs" />
+    <Compile Include="Models\ConsecutividadeHeader.cs" />
+    <Compile Include="Models\ConsecutividadeImportacao.cs" />
+    <Compile Include="Models\ExtratoTotalizado.cs" />
+    <Compile Include="Models\FatorConversaoMecanicaSimulador.cs" />
+    <Compile Include="Models\FatorConversaoSimulador.cs" />
+    <Compile Include="Models\Importacao\ImportacaoErro.cs" />
+    <Compile Include="Models\Importacao\CustomDateTimeTypeConverter.cs" />
+    <Compile Include="Models\Importacao\ConteudoPosicao.cs" />
+    <Compile Include="Models\Importacao\LinhaLote.cs" />
+    <Compile Include="Models\IndicacaoDetail.cs" />
+    <Compile Include="Models\DetailExtrato.cs" />
+    <Compile Include="Models\IndicacaoDetailExtrato.cs" />
+    <Compile Include="Models\HeaderExtrato.cs" />
+    <Compile Include="Models\IndicacaoHeaderExtrato.cs" />
+    <Compile Include="Models\IndicacaoHeader.cs" />
+    <Compile Include="Models\IndicacaoHeaderLote.cs" />
+    <Compile Include="Models\LogIntegracao.cs" />
+    <Compile Include="Models\LogAccount.cs" />
+    <Compile Include="Models\LogAprovacaoArquivo.cs" />
+    <Compile Include="Models\LogDetalhado.cs" />
+    <Compile Include="Models\Mapping\ApoioExtratoMap.cs" />
+    <Compile Include="Models\Mapping\ArquivoClubeEstrelasRegisterMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMecanicaSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\CatalogoCPMap.cs" />
+    <Compile Include="Models\Mapping\FatorConversaoSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\IconeSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\MecanicaSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\MecanicaSubMecanicaSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\FatorConversaoMecanicaSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\IndicacaoDetailExtratoMap.cs" />
+    <Compile Include="Models\Mapping\IndicacaoHeaderExtratoMap.cs" />
+    <Compile Include="Models\Mapping\IndicacaoHeaderLoteMap.cs" />
+    <Compile Include="Models\Mapping\IndicacaoHeaderMap.cs" />
+    <Compile Include="Models\IndicacaoImportacao.cs" />
+    <Compile Include="Models\LogProcessamentoDb.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\Lote.cs" />
+    <Compile Include="Models\Mapping\ApoioDetailMap.cs" />
+    <Compile Include="Models\Mapping\CatalogoMap.cs" />
+    <Compile Include="Models\Mapping\ConsecutividadeDetailMap.cs" />
+    <Compile Include="Models\Mapping\ConsecutividadeHeaderMap.cs" />
+    <Compile Include="Models\Mapping\Importacao\ConsecutividadeImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\Importacao\ApoioImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\Importacao\IndicacaoImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\IndicacaoDetailMap.cs" />
+    <Compile Include="Models\Mapping\LogIntegracaoMap.cs" />
+    <Compile Include="Models\Mapping\LogAccountMap.cs" />
+    <Compile Include="Models\Mapping\LogAprovacaoArquivoMap.cs" />
+    <Compile Include="Models\Mapping\LogDetalhadoMap.cs" />
+    <Compile Include="Models\Mapping\LogProcessamento.cs" />
+    <Compile Include="Models\Mapping\LoteMap.cs" />
+    <Compile Include="Models\Mapping\MetaRAMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteCatalogoMap.cs" />
+    <Compile Include="Models\Mapping\ImportacaoErroMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteCPMap.cs" />
+    <Compile Include="Models\Mapping\PontuacaoArquivosMap.cs" />
+    <Compile Include="Models\Mapping\PontuacaoRecebidaMap.cs" />
+    <Compile Include="Models\Mapping\ResgatesAvonMap.cs" />
+    <Compile Include="Models\Mapping\SalesStructureImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\StatusDetailMap.cs" />
+    <Compile Include="Models\Mapping\SubMecanicaSimuladorMap.cs" />
+    <Compile Include="Models\Mapping\TipoOrigemMap.cs" />
+    <Compile Include="Models\IconeSimulador.cs" />
+    <Compile Include="Models\MecanicaSimulador.cs" />
+    <Compile Include="Models\MecanicaSubMecanicaSimulador.cs" />
+    <Compile Include="Models\MetaRA.cs" />
+    <Compile Include="Models\MktPlace\ProductSearchResult.cs" />
+    <Compile Include="Models\MktPlace\ProductsShowCase.cs" />
+    <Compile Include="Models\MktPlace\ReversedBalance.cs" />
+    <Compile Include="Models\MktPlace\StoreModel.cs" />
+    <Compile Include="Models\MktPlace\StringExtensions.cs" />
+    <Compile Include="Models\ParticipanteCatalogo.cs" />
+    <Compile Include="Models\Catalogo.cs" />
+    <Compile Include="Models\Arquivo.cs" />
+    <Compile Include="Models\Assunto.cs" />
+    <Compile Include="Models\AvonAuthentication.cs" />
+    <Compile Include="Models\AvonAddress.cs" />
+    <Compile Include="Models\MktPlace\AcceptModel.cs" />
+    <Compile Include="Models\MktPlace\AddressModel.cs" />
+    <Compile Include="Models\MktPlace\EmailModel.cs" />
+    <Compile Include="Models\MktPlace\Participant.cs" />
+    <Compile Include="Models\Campanha.cs" />
+    <Compile Include="Models\CampanhaAssociacaoGrupoItem.cs" />
+    <Compile Include="Models\CampanhaAssociacaoGrupoItemImportacao.cs" />
+    <Compile Include="Models\CampanhaCalculadaMetaResultadoGrupoItemImportacao.cs" />
+    <Compile Include="Models\CampanhaCalculadaMetaResultadoPessoaImportacao.cs" />
+    <Compile Include="Models\CampanhaCalculadaMetaResultadoRankingImportacao.cs" />
+    <Compile Include="Models\CampanhaCalculadaVendeuGanhouGrupoItemImportacao.cs" />
+    <Compile Include="Models\CampanhaCalculadaVendeuGanhouPessoaImportacao.cs" />
+    <Compile Include="Models\CampanhaCalculadaVendeuGanhouRankingImportacao.cs" />
+    <Compile Include="Models\CampanhaConteudo.cs" />
+    <Compile Include="Models\CampanhaEstrutura.cs" />
+    <Compile Include="Models\CampanhaFaixaAtingimento.cs" />
+    <Compile Include="Models\CampanhaFaixaAtingimentoGrupoItem.cs" />
+    <Compile Include="Models\CampanhaFaixaAtingimentoGrupoItemImportacao.cs" />
+    <Compile Include="Models\CampanhaGrupoItem.cs" />
+    <Compile Include="Models\CampanhaGrupoItemPonto.cs" />
+    <Compile Include="Models\CampanhaGrupoItemPontosImportacao.cs" />
+    <Compile Include="Models\CampanhaLogArquivo.cs" />
+    <Compile Include="Models\CampanhaMetaGrupoItemPerfil.cs" />
+    <Compile Include="Models\CampanhaMetaGrupoItemPerfilImportacao.cs" />
+    <Compile Include="Models\CampanhaMetaParticipante.cs" />
+    <Compile Include="Models\CampanhaMetaPessoa.cs" />
+    <Compile Include="Models\CampanhaMetaPessoaImportacao.cs" />
+    <Compile Include="Models\CampanhaPasso.cs" />
+    <Compile Include="Models\CampanhaPerfil.cs" />
+    <Compile Include="Models\CampanhaPeriodo.cs" />
+    <Compile Include="Models\CampanhaPeriodoParticipanteEstrutura.cs" />
+    <Compile Include="Models\CampanhaPeriodoParticipanteHierarquia.cs" />
+    <Compile Include="Models\CampanhaPeriodoParticipantePerfil.cs" />
+    <Compile Include="Models\CampanhaResultadoCalculadoParticipante.cs" />
+    <Compile Include="Models\CampanhaResultadoParticipante.cs" />
+    <Compile Include="Models\ConfiguracaoCampanha.cs" />
+    <Compile Include="Models\Conteudo.cs" />
+    <Compile Include="Models\ConteudoEstrutura.cs" />
+    <Compile Include="Models\ConteudoImagem.cs" />
+    <Compile Include="Models\ConteudoPerfil.cs" />
+    <Compile Include="Models\DB_WebSmart_F2Context.cs" />
+    <Compile Include="Models\DisparoEmail.cs" />
+    <Compile Include="Models\DisparoEmailTipo.cs" />
+    <Compile Include="Models\Estado.cs" />
+    <Compile Include="Models\Estrutura.cs" />
+    <Compile Include="Models\Faixa.cs" />
+    <Compile Include="Models\FaixaAtingemento.cs" />
+    <Compile Include="Models\FaleConosco.cs" />
+    <Compile Include="Models\GrupoItem.cs" />
+    <Compile Include="Models\GrupoItemImportacao.cs" />
+    <Compile Include="Models\LogAcao.cs" />
+    <Compile Include="Models\LogErro.cs" />
+    <Compile Include="Models\LogRaiz.cs" />
+    <Compile Include="Models\LogTipo.cs" />
+    <Compile Include="Models\Mapping\ArquivoMap.cs" />
+    <Compile Include="Models\Mapping\AssuntoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaAssociacaoGrupoItemImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaAssociacaoGrupoItemMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaCalculadaMetaResultadoGrupoItemImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaCalculadaMetaResultadoPessoaImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaCalculadaMetaResultadoRankingImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaCalculadaVendeuGanhouGrupoItemImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaCalculadaVendeuGanhouPessoaImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaCalculadaVendeuGanhouRankingImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaConteudoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaFaixaAtingimentoGrupoItemImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaFaixaAtingimentoGrupoItemMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaFaixaAtingimentoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaGrupoItemMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaGrupoItemPontoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaGrupoItemPontosImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaLogArquivoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMetaGrupoItemPerfilImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMetaGrupoItemPerfilMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMetaParticipanteMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMetaPessoaImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaMetaPessoaMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaPassoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaPerfilMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaPeriodoMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaPeriodoParticipanteEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaPeriodoParticipanteHierarquiaMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaPeriodoParticipantePerfilMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaResultadoCalculadoParticipanteMap.cs" />
+    <Compile Include="Models\Mapping\CampanhaResultadoParticipanteMap.cs" />
+    <Compile Include="Models\Mapping\ConfiguracaoCampanhaMap.cs" />
+    <Compile Include="Models\Mapping\ConteudoEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\ConteudoImagemMap.cs" />
+    <Compile Include="Models\Mapping\ConteudoMap.cs" />
+    <Compile Include="Models\Mapping\ConteudoPerfilMap.cs" />
+    <Compile Include="Models\Mapping\DisparoEmailMap.cs" />
+    <Compile Include="Models\Mapping\DisparoEmailTipoMap.cs" />
+    <Compile Include="Models\Mapping\EstadoMap.cs" />
+    <Compile Include="Models\Mapping\EstruturaMap.cs" />
+    <Compile Include="Models\Mapping\FaixaAtingementoMap.cs" />
+    <Compile Include="Models\Mapping\FaixaMap.cs" />
+    <Compile Include="Models\Mapping\FaleConoscoMap.cs" />
+    <Compile Include="Models\Mapping\GrupoItemImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\GrupoItemMap.cs" />
+    <Compile Include="Models\Mapping\LogErroMap.cs" />
+    <Compile Include="Models\Mapping\LogAcaoMap.cs" />
+    <Compile Include="Models\Mapping\LogPontuacaoMap.cs" />
+    <Compile Include="Models\Mapping\LogTipoMap.cs" />
+    <Compile Include="Models\Mapping\MenuEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\MenuMap.cs" />
+    <Compile Include="Models\Mapping\MenuPerfilMap.cs" />
+    <Compile Include="Models\Mapping\ModuloEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\ModuloMap.cs" />
+    <Compile Include="Models\Mapping\ModuloPerfilMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteHierarquiaImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteHierarquiaMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteMap.cs" />
+    <Compile Include="Models\Mapping\ParticipantePerfilMap.cs" />
+    <Compile Include="Models\Mapping\ParticipanteQuestionarioMap.cs" />
+    <Compile Include="Models\Mapping\PassoMap.cs" />
+    <Compile Include="Models\Mapping\PerfilMap.cs" />
+    <Compile Include="Models\Mapping\PerguntaMap.cs" />
+    <Compile Include="Models\Mapping\PeriodoMap.cs" />
+    <Compile Include="Models\Mapping\PontuacaoCampanhaPeriodoMap.cs" />
+    <Compile Include="Models\Mapping\PontuacaoImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\PontuacaoMap.cs" />
+    <Compile Include="Models\Mapping\PontuacaoParticipanteQuestionarioMap.cs" />
+    <Compile Include="Models\Mapping\QuestionarioEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\QuestionarioMap.cs" />
+    <Compile Include="Models\Mapping\QuestionarioPerfilMap.cs" />
+    <Compile Include="Models\Mapping\RespostaMap.cs" />
+    <Compile Include="Models\Mapping\StatusArquivoMap.cs" />
+    <Compile Include="Models\Mapping\StatusCampanhaMap.cs" />
+    <Compile Include="Models\Mapping\StatusFaleConoscoMap.cs" />
+    <Compile Include="Models\Mapping\StatusParticipanteMap.cs" />
+    <Compile Include="Models\Mapping\StatusPontuacaoMap.cs" />
+    <Compile Include="Models\Mapping\TemaMap.cs" />
+    <Compile Include="Models\Mapping\TipoAcessoMap.cs" />
+    <Compile Include="Models\Mapping\TipoArquivoMap.cs" />
+    <Compile Include="Models\Mapping\TipoCadastroMap.cs" />
+    <Compile Include="Models\Mapping\TipoCampanhaMap.cs" />
+    <Compile Include="Models\Mapping\TipoConteudoMap.cs" />
+    <Compile Include="Models\Mapping\TipoEstruturaMap.cs" />
+    <Compile Include="Models\Mapping\TipoModuloMap.cs" />
+    <Compile Include="Models\Mapping\TipoPontuacaoMap.cs" />
+    <Compile Include="Models\Mapping\TipoQuestionarioMap.cs" />
+    <Compile Include="Models\Mapping\TipoRespostaMap.cs" />
+    <Compile Include="Models\Mapping\TipoValidacaoPositivaMap.cs" />
+    <Compile Include="Models\Mapping\UsuarioAdmMap.cs" />
+    <Compile Include="Models\Mapping\UsuarioAdmMenuMap.cs" />
+    <Compile Include="Models\Mapping\VendaImportacaoMap.cs" />
+    <Compile Include="Models\Mapping\VendaLogArquivoMap.cs" />
+    <Compile Include="Models\Mapping\VendaMap.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MenuEstrutura.cs" />
+    <Compile Include="Models\MenuPerfil.cs" />
+    <Compile Include="Models\MktPlace\PhoneModel.cs" />
+    <Compile Include="Models\Modulo.cs" />
+    <Compile Include="Models\ModuloEstrutura.cs" />
+    <Compile Include="Models\ModuloPerfil.cs" />
+    <Compile Include="Models\Participante.cs" />
+    <Compile Include="Models\ParticipanteCP.cs" />
+    <Compile Include="Models\ParticipanteEstrutura.cs" />
+    <Compile Include="Models\ParticipanteHierarquia.cs" />
+    <Compile Include="Models\ParticipanteHierarquiaImportacao.cs" />
+    <Compile Include="Models\ParticipanteImportacao.cs" />
+    <Compile Include="Models\ParticipantePerfil.cs" />
+    <Compile Include="Models\ParticipanteQuestionario.cs" />
+    <Compile Include="Models\Passo.cs" />
+    <Compile Include="Models\Perfil.cs" />
+    <Compile Include="Models\Pergunta.cs" />
+    <Compile Include="Models\Periodo.cs" />
+    <Compile Include="Models\Pontuacao.cs" />
+    <Compile Include="Models\PontuacaoArquivos.cs" />
+    <Compile Include="Models\PontuacaoCampanhaPeriodo.cs" />
+    <Compile Include="Models\PontuacaoImportacao.cs" />
+    <Compile Include="Models\PontuacaoParticipanteQuestionario.cs" />
+    <Compile Include="Models\PontuacaoRecebida.cs" />
+    <Compile Include="Models\Questionario.cs" />
+    <Compile Include="Models\QuestionarioEstrutura.cs" />
+    <Compile Include="Models\QuestionarioPerfil.cs" />
+    <Compile Include="Models\ResgatesAvon.cs" />
+    <Compile Include="Models\Resposta.cs" />
+    <Compile Include="Models\SalesStructureImportacao.cs" />
+    <Compile Include="Models\SMSAgendamento.cs" />
+    <Compile Include="Models\SMSAgendamentoAvulso.cs" />
+    <Compile Include="Models\SMSAgendamentoPrograma.cs" />
+    <Compile Include="Models\SMSMovile.cs" />
+    <Compile Include="Models\SMSExecucoes.cs" />
+    <Compile Include="Models\Mapping\SMSMap.cs" />
+    <Compile Include="Models\SMSAgendamentoRA.cs" />
+    <Compile Include="Models\SMSStatusAgendamento.cs" />
+    <Compile Include="Models\SmsStatusMovile.cs" />
+    <Compile Include="Models\SmsStatusResult.cs" />
+    <Compile Include="Models\SMSTipo.cs" />
+    <Compile Include="Models\SMSMensagem.cs" />
+    <Compile Include="Models\StatusArquivo.cs" />
+    <Compile Include="Models\StatusCampanha.cs" />
+    <Compile Include="Models\StatusDetail.cs" />
+    <Compile Include="Models\StatusFaleConosco.cs" />
+    <Compile Include="Models\StatusParticipante.cs" />
+    <Compile Include="Models\StatusPontuacao.cs" />
+    <Compile Include="Models\SubMecanicaSimulador.cs" />
+    <Compile Include="Models\Tema.cs" />
+    <Compile Include="Models\TipoAcesso.cs" />
+    <Compile Include="Models\TipoArquivo.cs" />
+    <Compile Include="Models\TipoCadastro.cs" />
+    <Compile Include="Models\TipoCampanha.cs" />
+    <Compile Include="Models\TipoConteudo.cs" />
+    <Compile Include="Models\TipoEstrutura.cs" />
+    <Compile Include="Models\TipoModulo.cs" />
+    <Compile Include="Models\TipoOrigem.cs" />
+    <Compile Include="Models\TipoPontuacao.cs" />
+    <Compile Include="Models\TipoQuestionario.cs" />
+    <Compile Include="Models\TipoResposta.cs" />
+    <Compile Include="Models\TipoValidacaoPositiva.cs" />
+    <Compile Include="Models\UsuarioAdm.cs" />
+    <Compile Include="Models\UsuarioAdmAluno.cs" />
+    <Compile Include="Models\UsuarioAdmMenu.cs" />
+    <Compile Include="Models\Venda.cs" />
+    <Compile Include="Models\VendaImportacao.cs" />
+    <Compile Include="Models\VendaLogArquivo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\LogAcessoHotSiteRepository.cs" />
+    <Compile Include="Repositories\ParticipanteCatalogoRepository.cs" />
+    <Compile Include="Repositories\ParticipanteCPRepository.cs" />
+    <Compile Include="Repositories\CatalogRepository.cs" />
+    <Compile Include="Repositories\LogAccountRepository.cs" />
+    <Compile Include="Repositories\LogAprovacaoArquivoRepository.cs" />
+    <Compile Include="Repositories\ParticipantRepository.cs" />
+    <Compile Include="Repository\ProgramaIncentivoRepository.cs" />
+    <Compile Include="Repository\ArquivoRepository.cs" />
+    <Compile Include="Repository\Configuration\Configuration.cs" />
+    <Compile Include="Repository\ConteudoRepository.cs" />
+    <Compile Include="Repository\GrupoLTMWebSmartUnitOfWork.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\IUnitOfWork.cs" />
+    <Compile Include="Repository\Live\AvonProcessDBContext.cs" />
+    <Compile Include="Repository\Live\ConteudoRepositoryLive.cs" />
+    <Compile Include="Repository\Live\IRepositoryLive.cs" />
+    <Compile Include="Repository\Live\IUnitOfWorkProcess.cs" />
+    <Compile Include="Repository\Live\RepositoryLive.cs" />
+    <Compile Include="Repository\Live\UnitOfWorkFactoryLive.cs" />
+    <Compile Include="Repository\QuestionarioRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\UnitOfWorkFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrupoLTM.WebSmart.Infrastructure\GrupoLTM.WebSmart.Infrastructure.csproj">
+      <Project>{7abdd271-fcac-435d-9f98-4e9b1773d0f1}</Project>
+      <Name>GrupoLTM.WebSmart.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Avon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607191709302_Initial.resx">
+      <DependentUpon>201607191709302_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607221311088_SkipFirstAccess.resx">
+      <DependentUpon>201607221311088_SkipFirstAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607221643562_LogPageView.resx">
+      <DependentUpon>201607221643562_LogPageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607221757296_CatalogoAtivo.resx">
+      <DependentUpon>201607221757296_CatalogoAtivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607261410241_PeriodoCatalogo.resx">
+      <DependentUpon>201607261410241_PeriodoCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608031526222_Tabelas_Bulk.resx">
+      <DependentUpon>201608031526222_Tabelas_Bulk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608052053540_TabelasFinaisArquivo.resx">
+      <DependentUpon>201608052053540_TabelasFinaisArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608081917557_AjusteNormalizacaoIndicacao.resx">
+      <DependentUpon>201608081917557_AjusteNormalizacaoIndicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608092027214_AlteracaoTiposCamposConsecutividade.resx">
+      <DependentUpon>201608092027214_AlteracaoTiposCamposConsecutividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608101341166_InclusaoTabelaConsecutividadeHeader.resx">
+      <DependentUpon>201608101341166_InclusaoTabelaConsecutividadeHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608101740449_TabelasRastreamentoDaPontuacao.resx">
+      <DependentUpon>201608101740449_TabelasRastreamentoDaPontuacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608152323283_LogProcessamento.resx">
+      <DependentUpon>201608152323283_LogProcessamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608160013479_LogProcessamento2.resx">
+      <DependentUpon>201608160013479_LogProcessamento2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608161930473_TokenLogErro.resx">
+      <DependentUpon>201608161930473_TokenLogErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181030536_MergeHML.resx">
+      <DependentUpon>201608181030536_MergeHML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181907285_DataMapAvon.resx">
+      <DependentUpon>201608181907285_DataMapAvon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191832415_TabelaImportacaoErro.resx">
+      <DependentUpon>201608191832415_TabelaImportacaoErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608192042240_TabelaLote.resx">
+      <DependentUpon>201608192042240_TabelaLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221846278_CamposLoteTabelasNormalizadas.resx">
+      <DependentUpon>201608221846278_CamposLoteTabelasNormalizadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608222043239_CampoLoteTabelasImportacao.resx">
+      <DependentUpon>201608222043239_CampoLoteTabelasImportacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251948295_Alteracao Normalizacao.resx">
+      <DependentUpon>201608251948295_Alteracao Normalizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608261820021_TamanhoRepresentativeNumber.resx">
+      <DependentUpon>201608261820021_TamanhoRepresentativeNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608291714149_PontuacaoOrigem.resx">
+      <DependentUpon>201608291714149_PontuacaoOrigem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608311750161_AjustesBulk_Indice.resx">
+      <DependentUpon>201608311750161_AjustesBulk_Indice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609052020545_TabelaExtratoIndicacao.resx">
+      <DependentUpon>201609052020545_TabelaExtratoIndicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609061943012_TabelasExtratoNormalizadas.resx">
+      <DependentUpon>201609061943012_TabelasExtratoNormalizadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609072218386_TamanhoParticipant.resx">
+      <DependentUpon>201609072218386_TamanhoParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609121638290_IndicacaoDetailExtratoAtivo.resx">
+      <DependentUpon>201609121638290_IndicacaoDetailExtratoAtivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609121742339_IndicacaoHeaderExtratoMktPlaceCatalogoId.resx">
+      <DependentUpon>201609121742339_IndicacaoHeaderExtratoMktPlaceCatalogoId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609151713143_TabelaIndicacaoHeaderLote.resx">
+      <DependentUpon>201609151713143_TabelaIndicacaoHeaderLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161300192_Catalogo Empresa.resx">
+      <DependentUpon>201609161300192_Catalogo Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161734009_ArquivoConfiguracao.resx">
+      <DependentUpon>201609161734009_ArquivoConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161757396_Alteracoes Pontuacao.resx">
+      <DependentUpon>201609161757396_Alteracoes Pontuacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161846353_Campos Adicioandos Arquivo.resx">
+      <DependentUpon>201609161846353_Campos Adicioandos Arquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609161914313_FezJusLote.resx">
+      <DependentUpon>201609161914313_FezJusLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201037186_ArquivoId adicionado em Pontuacao.resx">
+      <DependentUpon>201609201037186_ArquivoId adicionado em Pontuacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201108380_Erro adicionado em Pontuacao.resx">
+      <DependentUpon>201609201108380_Erro adicionado em Pontuacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201610459_TratamentoErrosLote.resx">
+      <DependentUpon>201609201610459_TratamentoErrosLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201811584_TratamentoErrosLoteAjuste.resx">
+      <DependentUpon>201609201811584_TratamentoErrosLoteAjuste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221137059_ArquivoExtratoProcessado.resx">
+      <DependentUpon>201609221137059_ArquivoExtratoProcessado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221647558_Atualiza PontuacaoRecebida.resx">
+      <DependentUpon>201609221647558_Atualiza PontuacaoRecebida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221713364_Remove PontuacaoRecebida.resx">
+      <DependentUpon>201609221713364_Remove PontuacaoRecebida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221723359_Recria PontuacaoRecebida.resx">
+      <DependentUpon>201609221723359_Recria PontuacaoRecebida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609261348096_Long em IdOrigem do Catalogo.resx">
+      <DependentUpon>201609261348096_Long em IdOrigem do Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609281050307_CatalogoParticipanteMktPlace.resx">
+      <DependentUpon>201609281050307_CatalogoParticipanteMktPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609291140338_referredNameExtrato.resx">
+      <DependentUpon>201609291140338_referredNameExtrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292103575_TabelasCPArquivo.resx">
+      <DependentUpon>201609292103575_TabelasCPArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609301712031_CodigoMktPlaceTipo.resx">
+      <DependentUpon>201609301712031_CodigoMktPlaceTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610031626145_LoteImportacaoErro.resx">
+      <DependentUpon>201610031626145_LoteImportacaoErro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610041302313_Alteração Catalogo.resx">
+      <DependentUpon>201610041302313_Alteração Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610041911012_LinhaImportacaoCompleta.resx">
+      <DependentUpon>201610041911012_LinhaImportacaoCompleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610042014296_TabelaDeLogDetalhado.resx">
+      <DependentUpon>201610042014296_TabelaDeLogDetalhado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610051708025_AjusteNormalizadaConsecApoio.resx">
+      <DependentUpon>201610051708025_AjusteNormalizadaConsecApoio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610051801036_AjusteLinhaConteudo.resx">
+      <DependentUpon>201610051801036_AjusteLinhaConteudo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610051825436_TabelasDeExtrato.resx">
+      <DependentUpon>201610051825436_TabelasDeExtrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610052109233_AlteracaoTabelasDeExtrato.resx">
+      <DependentUpon>201610052109233_AlteracaoTabelasDeExtrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610061347145_CatalogoId em ResgateAvon.resx">
+      <DependentUpon>201610061347145_CatalogoId em ResgateAvon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610111043371_LogDetalhado.resx">
+      <DependentUpon>201610111043371_LogDetalhado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181855046_adicionandoTabelaMetaRA.resx">
+      <DependentUpon>201807181855046_adicionandoTabelaMetaRA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807201810405_alterandoColunasMetaRA.resx">
+      <DependentUpon>201807201810405_alterandoColunasMetaRA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807252003065_add-column-metas.resx">
+      <DependentUpon>201807252003065_add-column-metas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807252007384_change-column-metas.resx">
+      <DependentUpon>201807252007384_change-column-metas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808152133120_add-tabelas-sms.resx">
+      <DependentUpon>201808152133120_add-tabelas-sms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808171809284_alteraCamposSMS.resx">
+      <DependentUpon>201808171809284_alteraCamposSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221922303_alteraColunaArquivo.resx">
+      <DependentUpon>201808221922303_alteraColunaArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808232221001_alteraColunasSMSExecucao.resx">
+      <DependentUpon>201808232221001_alteraColunasSMSExecucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808241245085_alteraExecucao.resx">
+      <DependentUpon>201808241245085_alteraExecucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808272012297_atualizando-base.resx">
+      <DependentUpon>201808272012297_atualizando-base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808302153551_addAgendamentoSMS.resx">
+      <DependentUpon>201808302153551_addAgendamentoSMS.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
